@@ -1,0 +1,4 @@
+mixin main-features(features)
+	ul.main-features
+		each item, index in features
+			+main-feature(item, index).main-features-item

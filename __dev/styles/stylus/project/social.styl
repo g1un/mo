@@ -1,0 +1,24 @@
+.social
+	font-size 0
+	&-item
+		display inline-block
+		vertical-align top
+		margin-right 8px
+		&:last-child
+			margin-right 0
+	&-link
+		display block
+		width 30px
+		height 30px
+		for val in vk fb twitter
+			&.__{val}
+				sprite(val + '-footer')
+			&:hover
+				&.__{val}
+					sprite(val + '-footer-hover')
+		//&.__vk
+		//	sprite(vk-footer)
+		//&.__fb
+		//	sprite(fb-footer)
+		//&.__twitter
+		//	sprite(twitter-footer)

@@ -1,0 +1,7 @@
+div.container.clearfix
+	div.header-logo.logo
+		img(src="#{ images('logo.png') }", alt='logo').logo-img
+		p.logo-slogan Система заказа обедов
+	+call()(class="header-call")
+	a(href="#", data-popup-open="registration").header-login
+		span Вход

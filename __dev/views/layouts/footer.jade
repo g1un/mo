@@ -1,0 +1,29 @@
+.container
+	div.footer-up.clearfix
+		div.footer-logo
+			img(src="#{ images('logo-footer.png') }", alt="logo")
+		+call().footer-call
+		+social().footer-social
+	div.footer-down.clearfix
+		p.footer-copyright © 2014 “Медвед Обед”. Все права защищены.
+		ul.footer-menu
+			-
+				var bottomMemu = [{
+					name: 'Контакты',
+					link: '#'
+				},
+				{
+					name: 'Отзывы о нас',
+					link: '#'
+				},
+				{
+					name: 'Партнерам',
+					link: '#'
+				}];
+			each item, index in bottomMemu
+				li.footer-menu-item
+					a(href="#{item.link}").footer-menu-link #{item.name}
+
+		p.footer-design
+			|Создание сайта:
+			a(href="#", target="_blank") realweb

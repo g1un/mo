@@ -1,0 +1,44 @@
+.header
+	padding 30px 0 20px
+	box-shadow 0 0 10px 0 rgba(77,38,0,.25)
+	border-top 12px solid #ec2720
+	position relative
+	z-index 1
+	min-width 1090px
+	.container
+		padding 0 40px 0 35px
+	&-logo
+		float left
+		margin-right 76px
+	&-call
+		float left
+		margin-top 7px
+	&-login
+		display block
+		float right
+		margin-top 2px
+		padding-left 25px
+		max-width 250px
+		text-decoration none
+		position relative
+		&:before
+			content ''
+			position absolute
+			top 4px
+			left 0
+			sprite(login)
+		span
+			display inline-block
+			vertical-align top
+			max-width 100%
+			overflow hidden
+			text-overflow ellipsis
+			white-space nowrap
+			font-family Tahoma, Arial,sans-serif
+			font-size 20px
+			line-height 1.2em
+			color #5b925c
+			text-decoration none
+			border-bottom 1px dashed #5b925c
+			&:hover
+				border-bottom none
