@@ -9,3 +9,9 @@
 	src: url('opensans-semibold.woff2') format('woff2'),
 	url('opensans-semibold.woff') format('woff');
 }
+
+@font-face {
+	font-family: 'Open-Sans-Italic';
+	src: url('opensans-italic.woff2') format('woff2'),
+	url('opensans-italic.woff') format('woff');
+}

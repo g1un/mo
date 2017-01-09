@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Имя",
+    "name": "name"
+  },
+  {
+    "title": "Фамилия",
+    "name": "surname"
+  },
+  {
+    "title": "Логин",
+    "name": "login"
+  },
+  {
+    "title": "Пароль",
+    "name": "password",
+    "type": "password"
+  },
+  {
+    "title": "Подтверждение пароля",
+    "name": "password-confirm",
+    "type": "password"
+  },
+  {
+    "title": "Ваш e-mail",
+    "name": "e-mail"
+  },
+  {
+    "title": "Название компании",
+    "name": "company-name"
+  },
+  {
+    "title": "Телефон для\nсвязи",
+    "name": "tel"
+  },
+  {
+    "title": "Адрес доставки",
+    "name": "address"
+  },
+  {
+    "title": "Откуда вы о нас\nузнали",
+    "name": "source"
+  }
+]

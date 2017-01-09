@@ -260,7 +260,6 @@ main .italic {
 }
 main a:hover {
   text-decoration: none;
-  border-bottom: none;
 }
 main img {
   max-width: 100%;
@@ -546,8 +545,13 @@ main .small {
   cursor: text;
 }
 .form {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.form-table {
   display: table;
   width: 100%;
+  margin-bottom: 15px;
 }
 .form-row {
   display: table-row;
@@ -571,7 +575,30 @@ main .small {
   padding-bottom: 9px;
   width: 100%;
 }
-.form-control input {
+.form-control.__valid {
+  position: relative;
+}
+.form-control.__valid:before {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: -27px;
+  width: 12px;
+  height: 7px;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-left: 3px solid #559c61;
+  border-bottom: 3px solid #559c61;
+}
+.form-control.__valid .form-hint {
+  display: block;
+}
+.form-input,
+.form-input[type="text"],
+.form-input[type="password"] {
   display: block;
   width: 100%;
   padding-top: 7px;
@@ -587,4 +614,106 @@ main .small {
           box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
   font-size: 14px;
   color: #666;
+}
+.form-submit {
+  display: inline-block;
+  min-width: 144px;
+  padding-top: 0;
+  padding-right: 5px;
+  padding-bottom: 0;
+  padding-left: 5px;
+  background: #98dba3;
+  background: -webkit-gradient(linear, left bottom, left top, from(#98dba3), to(#c0f3c8));
+  background: -webkit-linear-gradient(bottom, #98dba3, #c0f3c8);
+  background: -moz-linear-gradient(bottom, #98dba3, #c0f3c8);
+  background: -o-linear-gradient(bottom, #98dba3, #c0f3c8);
+  background: linear-gradient(to top, #98dba3, #c0f3c8);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(51,51,51,0.75);
+     -moz-box-shadow: 1px 1px 1px 0 rgba(51,51,51,0.75);
+          box-shadow: 1px 1px 1px 0 rgba(51,51,51,0.75);
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  border: none;
+  outline: none;
+  font-family: Open-Sans-Reg, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #333;
+  text-align: center;
+}
+.form-submit:hover {
+  background: #c0f3c8;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c0f3c8), to(#98dba3));
+  background: -webkit-linear-gradient(bottom, #c0f3c8, #98dba3);
+  background: -moz-linear-gradient(bottom, #c0f3c8, #98dba3);
+  background: -o-linear-gradient(bottom, #c0f3c8, #98dba3);
+  background: linear-gradient(to top, #c0f3c8, #98dba3);
+}
+.form-select .ui-selectmenu-button {
+  min-width: 100%;
+  padding-top: 7px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  padding-left: 9px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
+     -moz-box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
+          box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.12);
+  background: transparent;
+  font-size: 14px;
+  color: #666;
+}
+.form-select .ui-selectmenu-button span.ui-selectmenu-text {
+  padding-top: 0;
+  padding-right: 25px;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.form-select .ui-selectmenu-button span.ui-icon {
+  border-left: 1px solid #ccc;
+  background: none;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.form-select .ui-selectmenu-button span.ui-icon:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #666;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  background: none;
+}
+.form-select .ui-selectmenu-menu .ui-menu-item {
+  padding-top: 7px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  padding-left: 9px;
+  font-size: 14px;
+  color: #666;
+}
+.form-hint {
+  display: none;
+  padding-left: 9px;
+  font-size: 12px;
+  color: #559c61;
 }

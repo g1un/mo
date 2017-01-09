@@ -1,0 +1,72 @@
+.aside
+	padding 8px 9px
+	box-shadow 0 0 10px 0 rgba(77,38,0,.25)
+	&-nav
+		margin-bottom 34px
+		&-item
+			margin-bottom 3px
+			&:last-child
+				margin-bottom 0
+		&-link
+			display block
+			padding 0 5px 0 19px
+			border-radius 3px
+			border 1px solid #469352
+			outline none
+			box-shadow 1px 1px 1px 0 rgba(51,51,51,.75)
+			background #449150
+			background linear-gradient(to top, #449150, #449150 49%, #70b07a 54%, #70b07a)
+			font-open-sans-reg()
+			font-size 15px
+			line-height 44px
+			color #fff
+			text-decoration none
+			text-align left
+			text-shadow 1px 1px 1px #000
+			&:hover
+				background #70b07a
+				background linear-gradient(to bottom, #449150, #449150 49%, #70b07a 54%, #70b07a)
+			&.__active
+				border-color #d60f0f
+				background images('background/aside-nav-bg.png') repeat-x 0 0
+				position relative
+				&:before
+					content ''
+					position absolute
+					top -1px
+					right -16px
+					sprite(aside-nav-triangle)
+	&-form
+		position relative
+		margin-bottom 30px
+		&:before
+			content ''
+			position absolute
+			top 50%
+			right 8px
+			sprite(search-red)
+			margin-top -8px
+			pointer-events none
+			z-index 1
+		&-search
+			box-shadow inset 3px 3px 1px 0 rgba(0,0,0,.05)
+			border none
+			outline none
+			background linear-gradient(to bottom, #f7f7f7, #fff)
+			padding 0 43px 0 12px
+			font-size 14px
+			line-height 30px
+			color #ccc
+			font-style italic
+			placeholder(1, #ccc)
+		&-submit[type="submit"]
+			position absolute
+			top 0
+			bottom 0
+			right 0
+			width 31px
+			background #f3e5cc
+			border none
+			outline none
+			border-radius 2px
+			font-size 0

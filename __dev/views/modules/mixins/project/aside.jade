@@ -1,0 +1,16 @@
+mixin aside(active)
+	+namespace("aside")
+		+el()
+			+el("nav", "ul")
+				each val in asideNav
+					+el("nav-item", "li")
+						+el("nav-link", "a")(href="#", class=active == val ? '__active' : '')!= val
+			+el("form", "form")(action="#", method="get").clearfix
+				+el("form-search", "input")(type="text", placeholder="Поиск...")
+				+el("form-submit", "input")(type="submit")
+			+el("menu")
+				+el("menu-title", "h3") Разделы меню:
+				+el("menu-list", "ul")
+					+el("menu-item", "li")
+						each val in asideMenu
+							+el("menu-link", "a")(href="#")!= val

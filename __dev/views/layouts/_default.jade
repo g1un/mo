@@ -110,10 +110,9 @@ html(lang="ru" class="#{ htmlClass ? htmlClass : '' } #{ isCurrentElement('Гл�
 
 			section.content
 				.container
-					.container-wrapper
-						block before-content
-						block content
-						block after-content
+					block before-content
+					block content
+					block after-content
 			if !hideFooter
 				footer.footer
 					include footer.jade

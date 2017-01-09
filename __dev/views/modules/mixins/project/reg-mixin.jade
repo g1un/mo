@@ -1,0 +1,64 @@
+mixin reg-mixin(registration)
+	form(action="", method="post", enctype="multipart/form-data", class="form")
+		.form-table
+			.form-row
+				.form-label
+					label(for="registration-name") Имя:
+				.form-control
+					input(type="text", name="registration-name", id="registration-name")
+			.form-row
+				.form-label
+					label(for="registration-surname") Фамилия:
+				.form-control
+					input(type="text", name="registration-surname", id="registration-surname")
+			.form-row
+				.form-label
+					label(for="registration-login") Логин:
+				.form-control
+					input(type="text", name="registration-login", id="registration-login")
+			.form-row
+				.form-label
+					label(for="registration-password") Пароль:
+				.form-control
+					input(type="password", name="registration-password", id="registration-password")
+			.form-row
+				.form-label
+					label(for="registration-password-confirm") Подтверждение пароля:
+				.form-control
+					input(type="password", name="registration-password-confirm", id="registration-password-confirm")
+			.form-row
+				.form-label
+					label(for="registration-email") Ваш e-mail:
+				.form-control
+					input(type="text", name="registration-email", id="registration-email")
+			.form-row
+				.form-label
+					label(for="registration-company-name") Название компании:
+				.form-control
+					input(type="text", name="registration-company-name", id="registration-company-name")
+			.form-row
+				.form-label
+					label(for="registration-tel") Телефон для<br>связи:
+				.form-control
+					input(type="text", name="registration-tel", id="registration-tel")
+			.form-row
+				.form-label
+					label(for="registration-address") Адрес доставки:
+				.form-control
+					input(type="text", name="registration-address", id="registration-address")
+			.form-row
+				.form-label
+					label(for="registration-info") Откуда вы о нас узнали:
+				.form-control
+					select(name="registration-info", id="registration-info")
+						option(value="1") От верблюда
+						option(value="2") От черепахи
+						option(value="3") От волка
+
+
+		//-each val in registration
+			.form-row
+				.form-label
+					label(for="registration-#{val.name}") #{val.title}:
+				.form-control
+					input(type="#{val.type ? val.type : 'text'}", name="registration-#{val.name}", id="registration-#{val.name}")

@@ -1,0 +1,65 @@
+[
+	{
+		"image": "mu-mu",
+		"name": "Му-му",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, true],
+		"price": "450"
+	},
+	{
+		"image": "sbarro",
+		"name": "Сбарро",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, false],
+		"price": "500"
+	},
+	{
+		"image": "pizza-fabrika",
+		"name": "Пицца фабрика",
+		"cuisine": "Японская, китайская",
+		"pay": [true, true],
+		"price": "430"
+	},
+	{
+		"image": "mu-mu",
+		"name": "Му-му",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, true],
+		"price": "450"
+	},
+	{
+		"image": "sbarro",
+		"name": "Сбарро",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, false],
+		"price": "500"
+	},
+	{
+		"image": "pizza-fabrika",
+		"name": "Пицца фабрика",
+		"cuisine": "Японская, китайская",
+		"pay": [true, true],
+		"price": "430"
+	},
+	{
+		"image": "mu-mu",
+		"name": "Му-му",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, true],
+		"price": "450"
+	},
+	{
+		"image": "sbarro",
+		"name": "Сбарро",
+		"cuisine": "Японская, итальянская",
+		"pay": [true, false],
+		"price": "500"
+	},
+	{
+		"image": "pizza-fabrika",
+		"name": "Пицца фабрика",
+		"cuisine": "Японская, китайская",
+		"pay": [true, true],
+		"price": "430"
+	}
+]

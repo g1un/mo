@@ -1,56 +1,67 @@
 +popup('registration', {title:'Регистрация'})
 	mixin content()
-		form(action="", method="post", enctype="multipart/form-data", class="form-table registration js-form-registration")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
-			.form-row
-				.form-label
-					label(for="registration-name") Имя:
-				.form-control
-					input(type="text", name="registration-name", id="registration-name", placeholder="")
+		form(action="", method="post", enctype="multipart/form-data", class="form")
+			.form-table
+				.form-row
+					.form-label
+						label(for="registration-name") Имя:
+					.form-control
+						input(type="text", name="registration-name", id="registration-name").form-input
+				.form-row
+					.form-label
+						label(for="registration-surname") Фамилия:
+					.form-control
+						input(type="text", name="registration-surname", id="registration-surname").form-input
+				.form-row
+					.form-label
+						label(for="registration-login") Логин:
+					.form-control.__valid
+						input(type="text", name="registration-login", id="registration-login").form-input
+						p.form-hint Имя свободно
+				.form-row
+					.form-label
+						label(for="registration-password") Пароль:
+					.form-control
+						input(type="password", name="registration-password", id="registration-password").form-input
+				.form-row
+					.form-label
+						label(for="registration-password-confirm") Подтверждение пароля:
+					.form-control
+						input(type="password", name="registration-password-confirm", id="registration-password-confirm").form-input
+				.form-row
+					.form-label
+						label(for="registration-email") Ваш e-mail:
+					.form-control
+						input(type="text", name="registration-email", id="registration-email").form-input
+				.form-row
+					.form-label
+						label(for="registration-company-name") Название компании:
+					.form-control
+						input(type="text", name="registration-company-name", id="registration-company-name").form-input
+				.form-row
+					.form-label
+						label(for="registration-tel") Телефон для<br>связи:
+					.form-control
+						input(type="text", name="registration-tel", id="registration-tel").form-input
+				.form-row
+					.form-label
+						label(for="registration-address") Адрес доставки:
+					.form-control
+						textarea(name="registration-address", id="registration-address").form-input.registration-textarea
+				.form-row
+					.form-label
+						label(for="registration-info") Откуда вы о нас узнали:
+					.form-control.form-select
+						select(name="registration-info", id="registration-info")
+							option(value="1") От верблюда
+							option(value="2") От черепахи
+							option(value="3") От волка
+			div.registration-wrapper.clearfix
+				p.registration-alert *Все поля обязательны для заполнения
+				input(type="submit", name="registration-submit", id="registration-submit", value="Отправить").form-submit.registration-btn
+			p.registration-text Мы свяжемся с Вами через несколько минут<br>для проверки адреса
+
+
 
 
 

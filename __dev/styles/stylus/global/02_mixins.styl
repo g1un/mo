@@ -528,3 +528,14 @@ getInputSize(sizes)
 		padding-top: round((sizes['height'] - (sizes['font-size']*_lineHeight))/2),
 		padding-bottom: round((sizes['height'] - (sizes['font-size']*_lineHeight))/2)
 	}
+
+placeholder(opacity, color)
+	&::-webkit-input-placeholder
+		opacity opacity
+		color color
+	&:-ms-input-placeholder
+		opacity opacity
+		color color
+	&::-moz-placeholder
+		opacity opacity
+		color color

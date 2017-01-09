@@ -1,0 +1,10 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Главная"]
+block content
+	.container-table
+		.container-aside
+			+aside("Поставщики")
+		.container-content
+			+suppliers(suppliers)

@@ -1,0 +1,25 @@
+mixin suppliers(suppliers)
+	+namespace("suppliers")
+		+el()
+			+el("alert", "p") #[span.red Внимание!] Заказы на завтра принимаются #[b до 16:00]
+				+el("table")
+					+el("table-row")
+						+el()
+						+el("table-head") Название ресторана
+						+el("table-head") Средняя цена обеда
+						+el()
+					each val in suppliers
+						+el("table-row")
+							+el("logo")
+								img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
+							+el("info")
+								+el("name", "h3")!= val.name
+								+el("cuisine", "p") Кухня: #{val.cuisine}
+								+el("pay", "p")
+									+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
+									+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
+							+el("price") #{val.price} р.
+							+el("menu")
+								+el("menu-btn", "button")(type="button") Меню
+
+
