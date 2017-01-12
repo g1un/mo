@@ -1,12 +1,11 @@
 .header
-	padding 30px 0 20px
 	box-shadow 0 0 10px 0 rgba(77,38,0,.25)
 	border-top 12px solid #ec2720
 	position relative
 	z-index 1
 	min-width 1090px
 	.container
-		padding 0 40px 0 35px
+		padding 30px 40px 20px 35px
 	&-logo
 		float left
 		margin-right 76px
@@ -39,6 +38,34 @@
 			line-height 1.2em
 			color #5b925c
 			text-decoration none
+			text-align right
 			border-bottom 1px dashed #5b925c
 			&:hover
 				border-bottom none
+	&.__logged
+		.header
+			&-login
+				margin -17px -16px 0 0
+				padding-left 0
+				padding-right 38px
+				&:before
+					top 0
+					left auto
+					right 0
+					sprite(logout)
+				span
+					font-size 15px
+					text-decoration underline
+					border-bottom none
+					&:hover
+						text-decoration none
+		.container
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 0
+				bottom 0
+				right 296px
+				width 1px
+				background #efebe8

@@ -5,25 +5,28 @@ $$icons = {
 	's-twitter-footer': 50px 0px -50px 0px 30px 30px 80px 80px 'images/icons/__sprite.png'
 	's-vk-footer': 0px 50px 0px -50px 30px 30px 80px 80px 'images/icons/__sprite.png'
 }
-$spritesCount = 17
+$spritesCount = 20
 $$sprite = {
-	's-arrow-right': 217px 120px -217px -120px 18px 16px 239px 160px 'images/sprites/__sprite.png'
-	's-arrow-up-green': 130px 100px -130px -100px 8px 10px 239px 160px 'images/sprites/__sprite.png'
-	's-aside-nav-triangle-1': 180px 66px -180px -66px 17px 46px 239px 160px 'images/sprites/__sprite.png'
-	's-aside-nav-triangle': 180px 0px -180px 0px 17px 46px 239px 160px 'images/sprites/__sprite.png'
-	's-calendar-green': 217px 80px -217px -80px 19px 20px 239px 160px 'images/sprites/__sprite.png'
-	's-cutlery-green': 0px 0px 0px 0px 45px 45px 239px 160px 'images/sprites/__sprite.png'
-	's-cutlery-yellow': 217px 0px -217px 0px 22px 20px 239px 160px 'images/sprites/__sprite.png'
-	's-fb-footer-hover': 50px 130px -50px -130px 30px 30px 239px 160px 'images/sprites/__sprite.png'
-	's-fb-footer': 65px 65px -65px -65px 30px 30px 239px 160px 'images/sprites/__sprite.png'
-	's-hat-green': 0px 65px 0px -65px 45px 45px 239px 160px 'images/sprites/__sprite.png'
-	's-login': 217px 40px -217px -40px 19px 20px 239px 160px 'images/sprites/__sprite.png'
-	's-pad-green': 65px 0px -65px 0px 45px 45px 239px 160px 'images/sprites/__sprite.png'
-	's-search-red': 180px 132px -180px -132px 16px 16px 239px 160px 'images/sprites/__sprite.png'
-	's-twitter-footer-hover': 130px 0px -130px 0px 30px 30px 239px 160px 'images/sprites/__sprite.png'
-	's-twitter-footer': 100px 130px -100px -130px 30px 30px 239px 160px 'images/sprites/__sprite.png'
-	's-vk-footer-hover': 0px 130px 0px -130px 30px 30px 239px 160px 'images/sprites/__sprite.png'
-	's-vk-footer': 130px 50px -130px -50px 30px 30px 239px 160px 'images/sprites/__sprite.png'
+	's-arrow-right': 0px 180px 0px -180px 18px 16px 239px 196px 'images/sprites/__sprite.png'
+	's-arrow-up-green': 130px 100px -130px -100px 8px 10px 239px 196px 'images/sprites/__sprite.png'
+	's-aside-nav-triangle-1': 180px 0px -180px 0px 17px 46px 239px 196px 'images/sprites/__sprite.png'
+	's-aside-nav-triangle': 180px 66px -180px -66px 17px 46px 239px 196px 'images/sprites/__sprite.png'
+	's-calendar-green': 217px 120px -217px -120px 19px 20px 239px 196px 'images/sprites/__sprite.png'
+	's-calendar-ring': 150px 130px -150px -130px 8px 25px 239px 196px 'images/sprites/__sprite.png'
+	's-clock': 180px 132px -180px -132px 16px 17px 239px 196px 'images/sprites/__sprite.png'
+	's-cutlery-green': 0px 65px 0px -65px 45px 45px 239px 196px 'images/sprites/__sprite.png'
+	's-cutlery-yellow': 217px 0px -217px 0px 22px 20px 239px 196px 'images/sprites/__sprite.png'
+	's-fb-footer-hover': 100px 130px -100px -130px 30px 30px 239px 196px 'images/sprites/__sprite.png'
+	's-fb-footer': 65px 65px -65px -65px 30px 30px 239px 196px 'images/sprites/__sprite.png'
+	's-hat-green': 65px 0px -65px 0px 45px 45px 239px 196px 'images/sprites/__sprite.png'
+	's-login': 217px 40px -217px -40px 19px 20px 239px 196px 'images/sprites/__sprite.png'
+	's-logout': 217px 80px -217px -80px 19px 20px 239px 196px 'images/sprites/__sprite.png'
+	's-pad-green': 0px 0px 0px 0px 45px 45px 239px 196px 'images/sprites/__sprite.png'
+	's-search-red': 38px 180px -38px -180px 16px 16px 239px 196px 'images/sprites/__sprite.png'
+	's-twitter-footer-hover': 130px 0px -130px 0px 30px 30px 239px 196px 'images/sprites/__sprite.png'
+	's-twitter-footer': 50px 130px -50px -130px 30px 30px 239px 196px 'images/sprites/__sprite.png'
+	's-vk-footer-hover': 0px 130px 0px -130px 30px 30px 239px 196px 'images/sprites/__sprite.png'
+	's-vk-footer': 130px 50px -130px -50px 30px 30px 239px 196px 'images/sprites/__sprite.png'
 }
 // BASE
 TITLE_CLASS = 'title'
@@ -1220,8 +1223,11 @@ html
 			text-align left
 			text-shadow 1px 1px 1px #000
 			&:hover
+				border-color #7ebe89
 				background #70b07a
-				background linear-gradient(to bottom, #449150, #449150 49%, #70b07a 54%, #70b07a)
+				background linear-gradient(to top, #80c28b, #80c28b 49%, #c0e6c6 54%, #c0e6c6)
+				color #000
+				text-shadow 1px 1px 1px #fff
 			&.__active
 				border-color #d60f0f
 				background images('background/aside-nav-bg.png') repeat-x 0 0
@@ -1292,6 +1298,154 @@ html
 			color #559c61
 			text-decoration none
 			border-bottom 1px dashed #559c61
+
+/*aside-profile*/
+.aside
+	&-calendar
+		margin-top 45px
+		position relative
+		&:before,
+		&:after
+			content ''
+			position absolute
+			height 2px
+			border-bottom 1px solid #b6b6b6
+			border-right 1px solid #b6b6b6
+			border-left 1px solid #b6b6b6
+			border-radius 4px
+		&:before
+			bottom -2px
+			left 3px
+			right 3px
+		&:after
+			bottom -4px
+			left 6px
+			right 6px
+		.ui-datepicker
+			width auto
+			padding 0
+			border none
+			border-right 1px solid #b6b6b6
+			border-bottom 1px solid #b6b6b6
+			border-radius 4px
+			.ui-datepicker-header
+				padding 0
+			.ui-datepicker-prev,
+			.ui-datepicker-next
+				display block
+				width auto
+				height auto
+				top 5px
+				border-radius 4px
+				box-shadow inset 1px 1px 2px 0 #896f55
+				padding 3px
+				cursor pointer
+				span
+					position relative
+					top auto
+					bottom auto
+					left auto
+					right auto
+					margin 0
+					background #dc0000
+					border-radius 2px
+					box-shadow 1px 1px 0 0 #80654a
+					&:before
+						content ''
+						position absolute
+						top 50%
+						margin-top -3px
+						width 0
+						height 0
+						border-top 3px solid transparent
+						border-bottom 3px solid transparent
+						filter: drop-shadow(0 -1px 0 rgba(0,0,0,.75))
+			.ui-datepicker-prev
+				left 5px
+				span
+					&:before
+						left 50%
+						margin-left -2px
+						border-right 3px solid #fff
+			.ui-datepicker-next
+				right 5px
+				span
+					&:before
+						right 50%
+						margin-right -2px
+						border-left 3px solid #fff
+		.ui-widget-header
+			background #c8a179;
+			background linear-gradient(to top, #ba8e64, #d0af8b);
+			box-shadow 1px 1px 0 0 rgba(0,0,0,.6)
+			border none
+			border-radius 3px 3px 0 0
+			position relative
+			&:before
+			&:after
+				content ''
+				position absolute
+				top -13px
+				sprite(calendar-ring)
+			&:before
+				left 42px
+			&:after
+				right 42px
+		.ui-datepicker-title
+			font-tahoma()
+			font-size 13px
+			line-height 32px
+			color #fff
+			font-weight 700
+			text-shadow 0 -1px 0 rgba(0,0,0,.35)
+		.ui-datepicker-calendar
+			thead
+				background #f7f4f0
+				border-bottom 1px solid #f1ebe5
+		.ui-datepicker
+			th
+				font-tahoma()
+				font-size 12px
+				color #2b2d30
+				font-weight 700
+				&.ui-datepicker-week-end
+					color #990000
+			td
+				padding 0
+		.ui-state-default,
+		.ui-widget-content .ui-state-default
+			padding 0
+			border-color transparent
+			font-tahoma()
+			line-height 22px
+			color #2b2d30
+			text-align center
+		.ui-state-disabled .ui-state-default,
+		.ui-widget-content .ui-state-disabled,
+		.ui-state-default
+			opacity 1
+			color #9498a1
+			background #fdfcfb
+		.ui-state-active,
+		.ui-widget-content .ui-state-active
+			background #f0e1c9
+		.ui-state-highlight,
+		.ui-widget-content .ui-state-highlight
+			font-weight 700
+			color #cc0000
+			background #fdfcfb
+		.ui-state-highlight.ui-state-active,
+		.ui-widget-content .ui-state-highlight.ui-state-active
+			font-weight 700
+			color #cc0000
+			background #f0e1c9
+		.ui-datepicker-week-end .ui-state-default
+			background #f7f4f0
+			border 1px solid #f1ebe5
+		.ui-datepicker-week-end .ui-state-active
+			background #f0e1c9
+			border 1px solid #f1ebe5
+
 .call
 	text-align right
 	&-online
@@ -1327,10 +1481,63 @@ html
 	&-aside
 		display table-cell
 		vertical-align top
-		width 224px
+		max-width 224px
 	&-content
 		display table-cell
 		vertical-align top
+		width 846px
+		padding 0 15px
+		border-top 7px solid #c8a179
+		&-wrapper
+			min-height: calc(100vh - 287px);
+.content-header
+	padding 14px 0 16px
+	border-bottom 1px solid #efebe8
+	text-align center
+	&-countdown
+		display block
+		margin 0 auto
+		max-width 340px
+		font-size 14px
+		color #559c61
+		padding-left 25px
+		position relative
+		text-align left
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 0
+			sprite(clock)
+			margin-top -8px
+	&-time
+		display inline-block
+		vertical-align top
+		margin-left 15px
+		span
+			font-open-sans-reg()
+			font-size 20px
+			color #333
+			background #ebebea
+			background linear-gradient(to bottom, #ebebea, #fff, #ebebea)
+			margin-right 1px
+			&:last-of-type
+				margin-right 0
+	&-balance
+		float right
+		span
+			font-size 14px
+			color #559c61
+			text-decoration underline
+		i
+
+			margin-left 8px
+			font-size 15px
+			color #333
+			font-style normal
+			b
+				margin-right 5px
+				font-weight 700
 .content
 	background images('background/main-bg.jpg') no-repeat center top
 	background-size cover
@@ -1400,14 +1607,13 @@ html
 		color #f3e5cc
 
 .header
-	padding 30px 0 20px
 	box-shadow 0 0 10px 0 rgba(77,38,0,.25)
 	border-top 12px solid #ec2720
 	position relative
 	z-index 1
 	min-width 1090px
 	.container
-		padding 0 40px 0 35px
+		padding 30px 40px 20px 35px
 	&-logo
 		float left
 		margin-right 76px
@@ -1440,9 +1646,37 @@ html
 			line-height 1.2em
 			color #5b925c
 			text-decoration none
+			text-align right
 			border-bottom 1px dashed #5b925c
 			&:hover
 				border-bottom none
+	&.__logged
+		.header
+			&-login
+				margin -17px -16px 0 0
+				padding-left 0
+				padding-right 38px
+				&:before
+					top 0
+					left auto
+					right 0
+					sprite(logout)
+				span
+					font-size 15px
+					text-decoration underline
+					border-bottom none
+					&:hover
+						text-decoration none
+		.container
+			position relative
+			&:before
+				content ''
+				position absolute
+				top 0
+				bottom 0
+				right 296px
+				width 1px
+				background #efebe8
 .logo
 	line-height 0
 	&-img
@@ -1614,6 +1848,39 @@ html
 
 .main-slider
 	border-bottom 16px solid #c8a179
+.profile
+	&-block
+		margin -1px 0 0
+		padding 23px 30px 38px
+		border-top 1px solid #efebe8
+		&-title
+			font-open-sans-reg()
+			font-size 16px
+			color #000
+			margin-bottom 20px
+	//&-form
+	//	width 430px
+	//	.form-label
+	//		min-width 150px
+	//&-textarea
+	//	min-height 94px
+	&-form
+		float left
+		width 390px
+		.form
+			&-input
+				min-width 250px
+			&-table
+				margin-bottom 40px
+	&-notification
+		float right
+		margin-top 50px
+		width 325px
+		height 17px
+		text-align right
+		.checkbox
+			display inline-block
+			text-align left
 .registration
 	&-wrapper
 		margin-bottom 35px
@@ -1642,6 +1909,11 @@ html
 		&-inner
 			width 494px
 			box-shadow 2px 2px 5px 0 rgba(61,50,38,.35)
+	.form
+		padding-bottom 25px
+		border-bottom 1px solid #ccc
+		&-table
+			margin-bottom 24px
 
 .social
 	font-size 0
@@ -1668,8 +1940,6 @@ html
 		//&.__twitter
 		//	sprite(twitter-footer)
 .suppliers
-	border-top 7px solid #c8a179
-	padding 0 15px
 	&-alert
 		padding 20px 8px 17px
 		box-shadow 0 10px 20px -10px rgba(77,38,0,0.12);

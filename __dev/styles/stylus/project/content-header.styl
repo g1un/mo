@@ -1,0 +1,48 @@
+.content-header
+	padding 14px 0 16px
+	border-bottom 1px solid #efebe8
+	text-align center
+	&-countdown
+		display block
+		margin 0 auto
+		max-width 340px
+		font-size 14px
+		color #559c61
+		padding-left 25px
+		position relative
+		text-align left
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 0
+			sprite(clock)
+			margin-top -8px
+	&-time
+		display inline-block
+		vertical-align top
+		margin-left 15px
+		span
+			font-open-sans-reg()
+			font-size 20px
+			color #333
+			background #ebebea
+			background linear-gradient(to bottom, #ebebea, #fff, #ebebea)
+			margin-right 1px
+			&:last-of-type
+				margin-right 0
+	&-balance
+		float right
+		span
+			font-size 14px
+			color #559c61
+			text-decoration underline
+		i
+
+			margin-left 8px
+			font-size 15px
+			color #333
+			font-style normal
+			b
+				margin-right 5px
+				font-weight 700

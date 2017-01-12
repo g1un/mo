@@ -105,7 +105,7 @@ html(lang="ru" class="#{ htmlClass ? htmlClass : '' } #{ isCurrentElement('Гл�
 		main
 			//.spritePreloading
 			if !hideHeader
-				header.header
+				header.header(class=logged ? "__logged" : "")
 					include header.jade
 
 			section.content

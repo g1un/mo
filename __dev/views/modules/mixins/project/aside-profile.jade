@@ -1,0 +1,7 @@
+mixin aside-profile(active)
+	+namespace("aside")
+		+el("nav", "ul")
+			each val in asideNavLogged
+				+el("nav-item", "li")
+					+el("nav-link", "a")(href="#", class=active == val ? '__active' : '')!= val
+		+el("calendar").js-calendar

@@ -1,7 +1,7 @@
-mixin aside(active)
+mixin aside(active, calendar)
 	+namespace("aside")
 		+el("nav", "ul")
-			each val in asideNav
+			each val in asideNavLogged
 				+el("nav-item", "li")
 					+el("nav-link", "a")(href="#", class=active == val ? '__active' : '')!= val
 		+el("form", "form")(action="#", method="get").clearfix
@@ -13,3 +13,5 @@ mixin aside(active)
 				each val in asideMenu
 					+el("menu-item", "li")
 						+el("menu-link", "a")(href="#")!= val
+		if calendar
+			+el("calendar").js-calendar

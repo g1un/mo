@@ -1,0 +1,49 @@
+mixin profile()
+	+namespace("profile")
+		+el().container-content-wrapper
+			+content-header()
+			-var i = 'profile'
+			+el("block").clearfix
+				+el("form", "form")(action="#", method="post")
+					.form-table
+						.form-row
+							.form-label
+								label(for="#{i}-name") Имя:
+							.form-control
+								input(type="text", name="#{i}-name", id="#{i}-name").form-input
+						.form-row
+							.form-label
+								label(for="#{i}-surname") Фамилия:
+							.form-control
+								input(type="text", name="#{i}-surname", id="#{i}-surname").form-input
+						.form-row
+							.form-label
+								label(for="#{i}-email") E-mail:
+							.form-control
+								input(type="text", name="#{i}-email", id="#{i}-email").form-input
+					input(type="submit", name="#{i}-change-submit", id="#{i}-change-submit", value="Изменить").btn
+				+el("notification")
+					.checkbox
+						input(type="checkbox", name="notification", id="notification").checkbox-input
+						label(for="notification").checkbox-label Присылать мне напоминание<br>за час до окончания приёма заказов
+			+el("block").clearfix
+				+el("block-title", "h4") Сменить пароль
+				+el("form", "form")(action="#", method="post")
+					.form-table
+						.form-row
+							.form-label
+								label(for="#{i}-password-old") Старый:
+							.form-control
+								input(type="password", name="#{i}-password-old", id="#{i}-password-old").form-input
+						.form-row
+							.form-label
+								label(for="#{i}-password-new") Новый:
+							.form-control
+								input(type="password", name="#{i}-password-new", id="#{i}-password-new").form-input
+						.form-row.__invalid
+							.form-label
+								label(for="#{i}-password-repeat") Повторить:
+							.form-control
+								input(type="password", name="#{i}-password-repeat", id="#{i}-password-repeat").form-input
+								p.form-hint Пароли не совпадают!
+					input(type="submit", name="#{i}-change-submit", id="#{i}-change-submit", value="Изменить").btn

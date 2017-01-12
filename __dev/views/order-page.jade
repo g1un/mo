@@ -1,0 +1,11 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Сделать заказ"];
+	-var logged = true;
+block content
+	.container-table
+		.container-aside.aside
+			+aside("Сделать заказ", true)
+		.container-content
+			+profile()

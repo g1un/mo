@@ -1,0 +1,11 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Мой профиль"];
+	-var logged = true;
+block content
+	.container-table
+		.container-aside.aside
+			+aside-profile("Мой профиль")
+		.container-content
+			+profile()
