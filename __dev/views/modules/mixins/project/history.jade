@@ -1,0 +1,23 @@
+mixin history()
+	+namespace("history")
+		+el()
+			+el("header", "header")
+				|Сумма моих заказов с
+				+el("date")
+					input(type="text", name="history-from", id="history-from", placeholder="Дата")
+				|по
+				+el("date")
+					input(type="text", name="history-to", id="history-to", placeholder="Дата")
+				| равна #[b 9045] руб.
+			+el("calendar").clearfix
+				+el("calendar-desc")
+					p Посмотреть мой заказ на:
+					+el("calendar-legend").__complete
+						span 8
+						p Заказ выполнен
+					+el("calendar-legend").__incomplete
+						span 8
+						p Заказ сделан,<br>но не исполнен
+				+el("calendar-datepicker")
+					.calendar.js-calendar
+

@@ -1,0 +1,63 @@
+.history
+	&-header
+		padding 7px 35px 8px
+		border-bottom 1px solid #f0eae5
+		font-size 14px
+		line-height 27px
+		color #333
+	&-date
+		display inline-block
+		vertical-align top
+		width 120px
+		padding 0 10px 0 35px
+		margin-right 10px
+		background #fbfbfb
+		line-height 27px
+		position relative
+		&:before
+			content ''
+			position absolute
+			top 4px
+			left 6px
+			sprite(calendar-green)
+		input[type='text']
+			placeholder(1, #999)
+			max-width 100%
+			padding 0
+			border none
+			background transparent
+	&-calendar
+		padding 23px 35px 22px
+		border-bottom 1px solid #f0eae5
+		font-size 14px
+		color #333
+		&-desc
+			float left
+			width 265px
+		&-legend
+			position relative
+			margin-bottom 15px
+			color #999
+			&.__complete
+				margin-top 75px
+				&:before
+					sprite(marker-green)
+			&.__incomplete
+				&:before
+					sprite(marker-red)
+			&:before
+				content ''
+				position absolute
+				top 0
+				left 3px
+			span
+				display inline-block
+				vertical-align top
+				margin 0 25px 0 11px
+			p
+				display inline-block
+				vertical-align top
+		&-datepicker
+			float left
+			width 204px
+

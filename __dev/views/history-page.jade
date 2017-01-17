@@ -1,0 +1,12 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Истрия заказов"];
+	-var logged = true;
+block content
+	.container-table
+		.container-aside.aside
+			+aside("История заказов", true)
+		.container-content
+			+content-header()
+			+history()
