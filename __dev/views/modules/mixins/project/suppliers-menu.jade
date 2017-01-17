@@ -1,0 +1,132 @@
+mixin suppliers-menu(volume)
+	+namespace("suppliers")
+		+el("menu-table").clearfix.js-suppliers-menu
+			+el("menu-head")
+				+el("menu-title")
+					| Меню компании “му-му” #[b на 27 мая] (среда) #[span.calendar]
+				+el("menu-price") Стоимость
+				if !volume
+					+el("menu-close")
+						a(href='#').js-suppliers-menu-close Свернуть
+				else
+					+el("menu-volume") Количество
+
+			+el("menu-content")
+				h3 Холодные закуски
+				ul
+					li
+						.title
+							| Салат "Весенний"
+							span Капуста, морковь, масло, соль
+						.price 30 р.
+						if volume
+							.volume
+								.input-volume.js-input-volume
+									.input-volume-minus.js-input-volume-minus
+									input(type="text", value="0").input-volume-value.js-input-volume-input
+									.input-volume-plus.js-input-volume-plus
+					li
+						.title
+							| Салат “Крабовый”
+							span Рис, кукуруза,  майонез, крабовое мясо
+						.price 40 р.
+						if volume
+							.volume
+								.input-volume.js-input-volume
+									.input-volume-minus.js-input-volume-minus
+									input(type="text", value="0").input-volume-value.js-input-volume-input
+									.input-volume-plus.js-input-volume-plus
+			+el("menu-content")
+				h3 Первые блюда
+				ul
+					li
+						.title
+							| Солянка
+						.price 30 р.
+						if volume
+							.volume
+								.input-volume.js-input-volume
+									.input-volume-minus.js-input-volume-minus
+									input(type="text", value="0").input-volume-value.js-input-volume-input
+									.input-volume-plus.js-input-volume-plus
+					li
+						.title
+							| Грибной суп
+						.price 40 р.
+						if volume
+							.volume
+								.input-volume.js-input-volume
+									.input-volume-minus.js-input-volume-minus
+									input(type="text", value="0").input-volume-value.js-input-volume-input
+									.input-volume-plus.js-input-volume-plus
+					li
+						.title
+							| Борщ украинский
+						.price 40 р.
+						if volume
+							.volume
+								.input-volume.js-input-volume
+									.input-volume-minus.js-input-volume-minus
+									input(type="text", value="0").input-volume-value.js-input-volume-input
+									.input-volume-plus.js-input-volume-plus
+			+el("menu-content").__complex
+				h3 Комплексные обеды
+				ul
+					li
+						+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
+							.title
+								i Комплексный обед №1
+							.price 180 р.
+							if volume
+								.volume
+									.input-volume.js-input-volume
+										.input-volume-minus.js-input-volume-minus
+										input(type="text", value="0").input-volume-value.js-input-volume-input
+										.input-volume-plus.js-input-volume-plus
+						+el("complex-content", "ul").js-suppliers-complex-menu
+							li
+								.title
+									| Салат картофельный с грибами (150 г)
+									span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
+							li
+								.title
+									| Ризотто с грибами (210 г)
+									span ризотто с грибами в сливочном соусе
+					li
+						+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
+							.title
+								i Комплексный обед №2
+							.price 180 р.
+							if volume
+								.volume
+									.input-volume.js-input-volume
+										.input-volume-minus.js-input-volume-minus
+										input(type="text", value="0").input-volume-value.js-input-volume-input
+										.input-volume-plus.js-input-volume-plus
+						+el("complex-content", "ul").js-suppliers-complex-menu
+							li
+								.title
+									| Салат картофельный с грибами (150 г)
+									span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
+							li
+								.title
+									| Ризотто с грибами (210 г)
+									span ризотто с грибами в сливочном соусе
+					li
+						+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
+							.title
+								i Комплексный обед №3
+							.price 180 р.
+
+						+el("complex-content", "ul").js-suppliers-complex-menu
+							li
+								.title
+									| Салат картофельный с грибами (150 г)
+									span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
+							li
+								.title
+									| Ризотто с грибами (210 г)
+									span ризотто с грибами в сливочном соусе
+			if !volume
+				+el("menu-close").__down
+					a(href='#').js-suppliers-menu-close Свернуть

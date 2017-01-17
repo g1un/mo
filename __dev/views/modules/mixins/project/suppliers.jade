@@ -2,104 +2,23 @@ mixin suppliers(suppliers)
 	+namespace("suppliers")
 		+el()
 			+el("alert", "p") #[span.red Внимание!] Заказы на завтра принимаются #[b до 16:00]
-				+el("list", "ul")
-					+el("list-head", "li").clearfix
-						+el("list-title") Название ресторана
-						+el("list-title") Средняя цена обеда
-					each val in suppliers
-						+el("item", "li")
-							+el("logo")
-								img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
-							+el("info")
-								+el("name", "h3")!= val.name
-								+el("cuisine", "p") Кухня: #{val.cuisine}
-								+el("pay", "p")
-									|Способы оплаты:
-									+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
-									+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
-							+el("price") #{val.price} р.
-							+el("menu")
-								+el("menu-btn", "button")(type="button").js-suppliers-menu-btn
-									span Меню
-						+el("menu-table").clearfix.js-suppliers-menu
-							+el("menu-head")
-								+el("menu-title")
-									|Меню компании “му-му” #[b на 27 мая] (среда) #[span.calendar]
-								+el("menu-price") Стоимость
-								+el("menu-close")
-									a(href='#').js-suppliers-menu-close Свернуть
-							+el("menu-content")
-								h3 Холодные закуски
-								ul
-									li
-										.title
-											|Салат "Весенний"
-											span Капуста, морковь, масло, соль
-										.price 30 р.
-									li
-										.title
-											|Салат “Крабовый”
-											span Рис, кукуруза,  майонез, крабовое мясо
-										.price 40 р.
-							+el("menu-content")
-								h3 Первые блюда
-								ul
-									li
-										.title
-											|Солянка
-										.price 30 р.
-									li
-										.title
-											|Грибной суп
-										.price 40 р.
-									li
-										.title
-											|Борщ украинский
-										.price 40 р.
-							+el("menu-content").__complex
-								h3 Комплексные обеды
-								ul
-									li
-										+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
-											.title
-												i Комплексный обед №1
-											.price 180 р.
-										+el("complex-content", "ul").js-suppliers-complex-menu
-											li
-												.title
-													|Салат картофельный с грибами (150 г)
-													span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
-											li
-												.title
-													|Ризотто с грибами (210 г)
-													span ризотто с грибами в сливочном соусе
-									li
-										+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
-											.title
-												i Комплексный обед №2
-											.price 180 р.
-										+el("complex-content", "ul").js-suppliers-complex-menu
-											li
-												.title
-													|Салат картофельный с грибами (150 г)
-													span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
-											li
-												.title
-													|Ризотто с грибами (210 г)
-													span ризотто с грибами в сливочном соусе
-									li
-										+el("menu-complex", "a")(href='#').js-suppliers-complex-btn
-											.title
-												i Комплексный обед №3
-											.price 180 р.
-										+el("complex-content", "ul").js-suppliers-complex-menu
-											li
-												.title
-													|Салат картофельный с грибами (150 г)
-													span картофель, опята, морковь, зеленый горошек, красный лук, ароматное масло
-											li
-												.title
-													|Ризотто с грибами (210 г)
-													span ризотто с грибами в сливочном соусе
-							+el("menu-close").__down
-								a(href='#').js-suppliers-menu-close Свернуть
+			+el("list", "ul")
+				+el("list-head", "li").clearfix
+					+el("list-title") Название ресторана
+					+el("list-title") Средняя цена обеда
+				each val in suppliers
+					+el("item", "li")
+						+el("logo")
+							img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
+						+el("info")
+							+el("name", "h3")!= val.name
+							+el("cuisine", "p") Кухня: #{val.cuisine}
+							+el("pay", "p")
+								| Способы оплаты:
+								+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
+								+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
+						+el("price") #{val.price} р.
+						+el("menu")
+							+el("menu-btn", "button")(type="button").js-suppliers-menu-btn
+								span Меню
+					+suppliers-menu()

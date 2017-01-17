@@ -25,16 +25,19 @@ App.run(function(){
 
     App.onClick('.js-suppliers-complex-btn', function(e){
         e.preventDefault();
-        var btn = $(this);
-        var menu = btn.parent().find('.js-suppliers-complex-menu');
+        var clicked = $(e.target);
+        if(!clicked.closest('.js-input-volume').length) {
+            var btn = $(this);
+            var menu = btn.parent().find('.js-suppliers-complex-menu');
 
-        if(!menu.hasClass('__show')) {
-            btn.addClass('__clicked');
-            menu.addClass('__show');
-        } else {
-            btn.removeClass('__clicked');
-            menu.removeClass('__show');
+            if(!menu.hasClass('__show')) {
+                btn.addClass('__clicked');
+                menu.addClass('__show');
+            } else {
+                btn.removeClass('__clicked');
+                menu.removeClass('__show');
+            }
         }
     });
-})
+});
 })();

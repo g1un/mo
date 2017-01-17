@@ -1,0 +1,11 @@
+mixin order()
+	+namespace("order")
+		+el("", "form")(action="#", method="get").container-content-wrapper
+			+content-header()
+			+suppliers-menu(true)
+			+el("footer").clearfix
+				+el("total", "p") Всего на сумму: #[span 675 р.]
+				+el("buttons")
+					+el("reset", "input")(type="reset", name="order-reset", id="order-reset", value="Отменить заказ").btn.__grey
+					+el("submit", "input")(type="submit", name="order-submit", id="order-submit", value="Заказать").btn
+					+el("to-suppliers", "a")(href="#") Вернуться к списку поставщиков

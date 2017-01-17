@@ -810,7 +810,9 @@ main .checkbox label:after {
           transform: rotate(-45deg);
 }
 main .btn {
-  width: 146px;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 146px;
   padding-top: 0;
   padding-right: 10px;
   padding-bottom: 0;
@@ -869,4 +871,16 @@ main .btn span {
   vertical-align: middle;
   line-height: 1em;
   border-bottom: 1px dashed #333;
+}
+main .btn.__grey {
+  color: #c00;
+  border: #e2e2e2;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(49%, #d7d7d7), color-stop(54%, #e8e8e8), color-stop(91%, #f7f8f7));
+  background: -webkit-linear-gradient(bottom, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%);
+  background: -moz-linear-gradient(bottom, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%);
+  background: -o-linear-gradient(bottom, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%);
+  background: linear-gradient(to top, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%);
+}
+main .btn.__grey:hover {
+  color: #fff;
 }

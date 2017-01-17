@@ -278,7 +278,9 @@ main
 
 	//button
 	.btn
-		width 146px
+		display inline-block
+		vertical-align top
+		min-width 146px
 		padding 0 10px
 		font-open-sans-reg()
 		font-size 18px
@@ -310,3 +312,9 @@ main
 			vertical-align middle
 			line-height 1em
 			border-bottom 1px dashed #333
+		&.__grey
+			color #cc0000
+			border #e2e2e2
+			background linear-gradient(to top, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%)
+			&:hover
+				color #fff

@@ -1,0 +1,56 @@
+.input-volume
+	display inline-block
+	vertical-align top
+	font-size 0
+	&-value,
+	&-minus,
+	&-plus
+		display inline-block
+		vertical-align top
+		background #ebebea
+		background linear-gradient(to top, #fefefe, #ebebea)
+	&-value[type="text"]
+		width 30px
+		height 22px
+		margin-right 1px
+		padding 0 1px
+		border none
+		outline none
+		font-open-sans-reg()
+		font-size 14px
+		line-height 22px
+		color #666
+		text-align center
+	&-minus,
+	&-plus
+		width 16px
+		height 22px
+		cursor pointer
+	&-minus
+		margin-right 1px
+		position relative
+		&:before
+			content ''
+			position absolute
+			top 7px
+			left 5px
+			width 6px
+			height 3px
+			background #ec3028
+	&-plus
+		position relative
+		&:before,
+		&:after
+			content ''
+			position absolute
+			background #559c61
+		&:before
+			top 8px
+			left 3px
+			width 10px
+			height 2px
+		&:after
+			top 4px
+			left 7px
+			width 2px
+			height 10px
