@@ -56,7 +56,7 @@
 					height 0
 					border-top 3px solid transparent
 					border-bottom 3px solid transparent
-					filter: drop-shadow(0 -1px 0 rgba(0,0,0,.75))
+					filter drop-shadow(0 -1px 0 rgba(0,0,0,.75))
 		.ui-datepicker-prev
 			left 5px
 			span
@@ -86,7 +86,7 @@
 		text-shadow 0 -1px 0 rgba(0,0,0,.35)
 	.ui-datepicker-calendar
 		thead
-			background #f7f4f0
+			background-color #f7f4f0
 			border-bottom 1px solid #f1ebe5
 	.ui-datepicker
 		th
@@ -98,6 +98,19 @@
 				color #990000
 		td
 			padding 0
+			//calendar markers
+			&.__complete
+				.ui-state-default,
+				.ui-state-disabled
+					background-image images('sprites/marker-green.png')
+					background-position center top
+					background-repeat no-repeat
+			&.__incomplete
+				.ui-state-default,
+				.ui-state-disabled
+					background-image images('sprites/marker-red.png')
+					background-position center top
+					background-repeat no-repeat
 	.ui-state-default,
 	.ui-widget-content .ui-state-default
 		padding 0
@@ -111,10 +124,10 @@
 	.ui-state-default
 		opacity 1
 		color #9498a1
-		background #fdfcfb
+		background-color #fdfcfb
 	.ui-state-active,
 	.ui-widget-content .ui-state-active
-		background #f0e1c9
+		background-color #f0e1c9
 	.ui-state-highlight,
 	.ui-widget-content .ui-state-highlight
 		font-weight 700
@@ -124,10 +137,10 @@
 	.ui-widget-content .ui-state-highlight.ui-state-active
 		font-weight 700
 		color #cc0000
-		background #f0e1c9
+		background-color #f0e1c9
 	.ui-datepicker-week-end .ui-state-default
-		background #f7f4f0
+		background-color #f7f4f0
 		border 1px solid #f1ebe5
 	.ui-datepicker-week-end .ui-state-active
-		background #f0e1c9
+		background-color #f0e1c9
 		border 1px solid #f1ebe5

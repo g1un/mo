@@ -3,7 +3,7 @@ mixin suppliers-menu(volume)
 		+el("menu-table").clearfix.js-suppliers-menu
 			+el("menu-head")
 				+el("menu-title")
-					| Меню компании “му-му” #[b на 27 мая] (среда) #[span.calendar]
+					| Меню компании “му-му” #[b на 27 мая] (среда) #[span.calendar-icon]
 				+el("menu-price") Стоимость
 				if !volume
 					+el("menu-close")
@@ -117,7 +117,12 @@ mixin suppliers-menu(volume)
 							.title
 								i Комплексный обед №3
 							.price 180 р.
-
+							if volume
+								.volume
+									.input-volume.js-input-volume
+										.input-volume-minus.js-input-volume-minus
+										input(type="text", value="0").input-volume-value.js-input-volume-input
+										.input-volume-plus.js-input-volume-plus
 						+el("complex-content", "ul").js-suppliers-complex-menu
 							li
 								.title

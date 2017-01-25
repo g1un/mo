@@ -1,0 +1,38 @@
+.slick-prev,
+.slick-next
+	position absolute
+	top 50%
+	margin-top -20px
+	width 40px
+	height 40px
+	border-radius 3px
+	background #f7f4f0
+	box-shadow none
+	outline none
+	border none
+	&:before
+		content ''
+		position absolute
+		top 50%
+		left 50%
+	&:hover
+		background #fcfcfb
+.slick-prev
+	left 20px
+	&:before
+		margin-top -10px
+		margin-left -4px
+		sprite(slick-prev)
+	&:hover
+		&:before
+			sprite(slick-prev-hovered)
+.slick-next
+	right 20px
+	&:before
+		margin-top -10px
+		margin-left -4px
+		sprite(slick-next)
+	&:hover
+		&:before
+			sprite(slick-next-hovered)
+

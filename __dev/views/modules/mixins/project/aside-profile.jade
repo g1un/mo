@@ -4,4 +4,4 @@ mixin aside-profile(active)
 			each val in asideNavLogged
 				+el("nav-item", "li")
 					+el("nav-link", "a")(href="#", class=active == val ? '__active' : '')!= val
-		+el("calendar").js-calendar
+		.calendar.js-calendar

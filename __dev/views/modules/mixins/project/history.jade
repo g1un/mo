@@ -1,4 +1,4 @@
-mixin history()
+mixin history(historyOrders)
 	+namespace("history")
 		+el()
 			+el("header", "header")
@@ -19,5 +19,17 @@ mixin history()
 						span 8
 						p Заказ сделан,<br>но не исполнен
 				+el("calendar-datepicker")
-					.calendar.js-calendar
-
+					.calendar.js-calendar.js-calendar-markers
+			+el("orders", "ul").js-history-orders-slider
+				each val in historyOrders
+					+el("orders-item", "li")
+						+el("orders-title", "h4")!= val.title
+						+el("orders-list")
+							ul
+								each elem, index in val.list
+									+el("orders-dish", "li")
+										.title #{index + 1}. #{elem.dish}
+										.price #{elem.price} руб.
+										.gap x
+										.volume #{elem.volume} шт.
+							+el("orders-total") Всего на сумму 675 р.
