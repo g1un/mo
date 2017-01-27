@@ -1,0 +1,46 @@
+.table
+	display table
+	font-size 16px
+	&-tr
+		display table-row
+		&:nth-child(odd)
+			background #fbfaf6
+		&:nth-child(2)
+			.table-td
+				height 54px
+				padding-top 18px
+		&.admin
+			.on
+				&:before
+					display inline-block
+					vertical-align middle
+					content ''
+					sprite(check-green)
+			.table-td
+				color #cc0000
+	&-th
+		display table-cell
+		vertical-align middle
+		height 30px
+		font-open-sans-sb()
+		color #000
+		text-align center
+		background #f7f4f0
+		border-right 1px solid #fff
+		&:first-child
+			border-radius 2px 0 0 2px
+		&:last-child
+			border-radius 0 2px 2px 0
+			border-right none
+	&-td
+		display table-cell
+		vertical-align middle
+		height 33px
+		font-open-sans-reg()
+		color #333
+		text-align center
+		&:first-child
+			border-radius 2px 0 0 2px
+		&:last-child
+			border-radius 0 2px 2px 0
+			border-right none

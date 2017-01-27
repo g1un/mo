@@ -1,0 +1,57 @@
+main
+	.btn
+		display inline-block
+		vertical-align top
+		min-width 146px
+		padding 0 10px
+		font-open-sans-reg()
+		font-size 18px
+		line-height 32px
+		color #333
+		border 1px solid #7ebe89
+		border-radius 3px
+		background #80c28b
+		background linear-gradient(to top, #80c28b, #80c28b 49%, #9ad5a4 54%, #9ad5a4)
+		box-shadow 1px 1px 1px 0 rgba(51,51,51,.75)
+		text-shadow 1px 1px 1px #fff
+		&:hover
+			border 1px solid #469352
+			background #98dba3
+			background linear-gradient(to top, #449150, #449150 49%, #70b07a 54%, #98dba3)
+			color #fff
+			text-shadow 1px 1px 1px #000
+			span
+				border-color transparent
+		span
+			display inline-block
+			vertical-align middle
+			line-height 1em
+			border-bottom 1px dashed #333
+		&.__grey
+			color #cc0000
+			border #e2e2e2
+			background linear-gradient(to top, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%)
+			&:hover
+				color #fff
+	.btn-dashed
+		display inline-block
+		vertical-align top
+		padding-right 14px
+		font-size 13px
+		color #cc0000
+		text-transform uppercase
+		text-decoration none
+		border-bottom 1px dashed #cc0000
+		position relative
+		&:hover
+			border-bottom-color transparent
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right 0
+			margin-top -5px
+			sprite(arrow-up-red)
+		&.__opened
+			&:after
+				transform rotate(180deg)

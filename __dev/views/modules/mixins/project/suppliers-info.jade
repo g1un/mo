@@ -1,0 +1,32 @@
+mixin suppliers-info()
+	+namespace("suppliers")
+		+el().container-content-wrapper
+			+el("list")
+				+el("list-head", "li").clearfix
+					+el("list-title") Название ресторана
+					+el("list-title") Средняя цена обеда
+					+el("list-title") Условия доставки<br>по вашему адресу:
+				each val in suppliers
+					+el("item")
+						+el("logo")
+							img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
+						+el("info")
+							+el("name", "h3")!= val.name
+							+el("cuisine", "p") Кухня: #{val.cuisine}
+							+el("pay")
+								+el("pay-title") Способы оплаты:
+								+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
+								+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
+							+el("schedule")(class=val.pay[0] ? 'on' : '')
+								+el("schedule-title") Работа по выходным<br>и праздничным дням:
+								+el("schedule-weekends-on", "span") Да
+								+el("schedule-weekends-off", "span") Нет
+							+el("more", "a")(href="#").btn-dashed Подробнее
+						+el("price") #{val.price} р.
+						+el("conditions")
+							h3 Минимальный заказ
+							p 800 р.
+							h3 Стоимость доставки
+							p 200 р.
+							h3 При заказе от 1000 руб.
+							p.red бесплатно

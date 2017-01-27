@@ -5,3 +5,6 @@ div.container.clearfix
 	+call()(class="header-call")
 	a(href="#", data-popup-open=!logged ? "registration" : "").header-login
 		span!= !logged ? "Вход" : "Валерий Разин"
+	if logged
+		a(href="#").header-message
+			span У Вас есть неподтвержденный заказ

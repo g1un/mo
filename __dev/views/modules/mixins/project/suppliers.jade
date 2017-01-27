@@ -13,8 +13,8 @@ mixin suppliers(suppliers)
 						+el("info")
 							+el("name", "h3")!= val.name
 							+el("cuisine", "p") Кухня: #{val.cuisine}
-							+el("pay", "p")
-								| Способы оплаты:
+							+el("pay")
+								+el("pay-title") Способы оплаты:
 								+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
 								+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
 						+el("price") #{val.price} р.

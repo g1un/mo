@@ -1,0 +1,11 @@
+mixin table(rows)
+	+namespace("table")
+		+el()(class!=attributes.class)
+			+el("tr")
+				each val in rows.tableHead
+					+el("th")!= val
+			each tr, index in rows.tableRows
+				+el("tr")(class="#{tr[tr.length-1]['admin'] ? 'admin' : ''}")
+					+el("td")!= index+1
+					each td in tr
+						+el("td")(class="#{td.admin ? 'on' : ''}")!= td.admin ? '' : td
