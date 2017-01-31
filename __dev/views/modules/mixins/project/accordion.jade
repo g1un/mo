@@ -1,7 +1,5 @@
-mixin accordion(title, options)
-	-if(options == null){options = {}}
+mixin accordion(items)
 	+namespace("accordion")
-		+el()(data-accordion="#{ options.group ? options.group : '' }")
-			+el("title", "a")(href="#" data-accordion-head="")!= title
-			+el("content")(data-accordion-content="")
-				block
+		+el("", "ul")
+			each val in items
+				+el("item", "li")(class="__#{val.icon}")!= val.title

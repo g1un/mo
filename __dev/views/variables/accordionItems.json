@@ -1,0 +1,18 @@
+[
+	{
+		"title": "Меню",
+		"icon": "cutlery-yellow"
+	},
+	{
+		"title": "О нас",
+		"icon": "check-on-green"
+	},
+	{
+		"title": "Оценка компании пользователями",
+		"icon": "star-yellow"
+	},
+	{
+		"title": "Отзывы",
+		"icon": "dialogue-green"
+	}
+]

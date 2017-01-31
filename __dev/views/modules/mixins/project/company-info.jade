@@ -1,0 +1,113 @@
+mixin company-info()
+	+namespace("company-info")
+		+el().container-content-wrapper
+			+content-header()
+			-var i = 'company'
+			+el("block")
+				+el("title") Информация о Вашей компании
+				+el("cell")
+					+el("form", "form")(action="#", method="post").clearfix
+						.form-table
+							.form-row
+								.form-label
+									label(for="#{i}-name") Название:
+								.form-control
+									input(type="text", name="#{i}-name", id="#{i}-name").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-surname") Контактный телефон:
+								.form-control
+									input(type="tel", name="#{i}-tel", id="#{i}-tel").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-email") Контактный e-mail:
+								.form-control
+									input(type="text", name="#{i}-email", id="#{i}-email").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-address") Адрес доставки:
+								.form-control
+									textarea(name="#{i}-address", id="#{i}-address").form-input.company-info-textarea
+							.form-row
+								.form-label
+									label(for="#{i}-email") Желаемое время доставки:
+								.form-control
+									input(type="text", name="#{i}-time", id="#{i}-time").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-address") Подробные данные для курьера:
+										span (как добраться, с кем связаться и т.д.)
+								.form-control
+									textarea(name="#{i}-address", id="#{i}-for-curier").form-input.company-info-textarea
+				+el("cell").__right
+					+el("logo").clearfix
+						.form-label
+							label Логотип компании:
+								span (необязательно)
+						label(for="#{i}-logo").btn Загрузить
+						.image
+							img(src="#{images('example/no-logo.png')}")
+					input(type="file", name="#{i}-logo", id="#{i}-logo").form-file
+					input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn
+					+el("comment", "p") В течении нескольких минут мы свяжемся<br>с Вами для уточнения данных
+			-var i = 'requisite'
+			+el("block").clearfix
+				+el("title") Реквизиты компании
+					span Необходимы, если Ваша компания собирается рассчитываться по б/н.
+				+el("cell")
+					+el("form", "form")(action="#", method="post").clearfix
+						.form-table
+							.form-row
+								.form-label
+									label(for="#{i}-name") Полное наименование компании:
+								.form-control
+									textarea(name="#{i}-name", id="#{i}-name").form-input.company-info-textarea-small
+							.form-row
+								.form-label
+									label(for="#{i}-inn") ИНН:
+								.form-control
+									input(type="tel", name="#{i}-inn", id="#{i}-inn").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-kpp") КПП:
+										span только для юрлиц
+								.form-control
+									input(type="tel", name="#{i}-kpp", id="#{i}-kpp").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-payment-account") Расчетный счет:
+								.form-control
+									input(type="tel", name="#{i}-payment-account", id="#{i}-payment-account").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-correspondence-account") Корреспонденсткий счет:
+								.form-control
+									input(type="tel", name="#{i}-correspondence-account", id="#{i}-correspondence-account").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-bik") БИК:
+								.form-control
+									input(type="tel", name="#{i}-bik", id="#{i}-bik").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-bank") Название банка:
+								.form-control
+									input(type="tel", name="#{i}-bank", id="#{i}-bank").form-input
+							.form-row
+								.form-label
+									label(for="#{i}-address") Почтовый адрес:
+								.form-control
+									textarea(name="#{i}-address", id="#{i}-address").form-input.company-info-textarea-small
+							.form-row
+								.form-label
+									label(for="#{i}-index") Индекс:
+								.form-control
+									input(type="tel", name="#{i}-index", id="#{i}-index").form-input
+				+el("cell").__right
+					.form-label
+						label(for="#{i}-index").label Телефон ответственного<br>бухгалтера:
+					input(type="tel", name="#{i}-index", id="#{i}-index").form-input
+					.form-label
+						label(for="#{i}-index").label E-mail ответственного<br>бухгалтера:
+					input(type="tel", name="#{i}-index", id="#{i}-index").form-input
+					input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn

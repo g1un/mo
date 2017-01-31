@@ -635,6 +635,9 @@ main .form-control {
   padding-bottom: 9px;
   width: 100%;
 }
+main .form-file {
+  display: none;
+}
 main .form-hint {
   display: none;
   position: absolute;

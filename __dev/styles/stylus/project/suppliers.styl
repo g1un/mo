@@ -348,3 +348,61 @@
 				color #cc0000
 	&-more
 		margin-top 20px
+	&-unit
+		margin-bottom 5px
+	&-about
+		display none
+		padding 15px 20px 20px
+		font-size 14px
+		line-height 20px
+		color #666
+		text-indent 15px
+		&.__show
+			display block
+		img
+			display block
+			float right
+			margin-left 20px
+		p
+			float left
+			&:after
+				content ''
+				display table
+				clear both
+	&-accordion
+		display none
+		&.__show
+			display block
+	&-comments
+		display none
+		margin-bottom 12px
+		&.__show
+			display block
+		&-close
+			margin 0 20px
+			border-top 1px solid #f0eae5
+			padding 14px 23px 50px 23px
+	&-rating
+		display none
+		padding 20px 0
+		&-chart
+			height 220px
+		&.__show
+			display block
+		&-period
+			margin-top 20px
+			font-size 0
+			text-align center
+			li
+				display inline-block
+				vertical-align top
+				margin-right 66px
+				font-size 14px
+				color #559c61
+				border-bottom 1px dashed #559c61
+				cursor pointer
+				&:last-child
+					margin-right 0
+				&.__active
+					border-color transparent
+					color #999

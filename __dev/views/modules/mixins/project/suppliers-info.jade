@@ -2,31 +2,97 @@ mixin suppliers-info()
 	+namespace("suppliers")
 		+el().container-content-wrapper
 			+el("list")
-				+el("list-head", "li").clearfix
+				+el("list-head").clearfix
 					+el("list-title") Название ресторана
 					+el("list-title") Средняя цена обеда
 					+el("list-title") Условия доставки<br>по вашему адресу:
 				each val in suppliers
-					+el("item")
-						+el("logo")
-							img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
-						+el("info")
-							+el("name", "h3")!= val.name
-							+el("cuisine", "p") Кухня: #{val.cuisine}
-							+el("pay")
-								+el("pay-title") Способы оплаты:
-								+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
-								+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
-							+el("schedule")(class=val.pay[0] ? 'on' : '')
-								+el("schedule-title") Работа по выходным<br>и праздничным дням:
-								+el("schedule-weekends-on", "span") Да
-								+el("schedule-weekends-off", "span") Нет
-							+el("more", "a")(href="#").btn-dashed Подробнее
-						+el("price") #{val.price} р.
-						+el("conditions")
-							h3 Минимальный заказ
-							p 800 р.
-							h3 Стоимость доставки
-							p 200 р.
-							h3 При заказе от 1000 руб.
-							p.red бесплатно
+					+el("unit")
+						+el("item")
+							+el("logo")
+								img(src="#{ images('example/' + val.image + '.png') }", alt="#{val.image}")
+							+el("info")
+								+el("name", "h3")!= val.name
+								+el("cuisine", "p") Кухня: #{val.cuisine}
+								+el("pay")
+									+el("pay-title") Способы оплаты:
+									+el("pay-cash", "span")(class=val.pay[0] ? 'on' : '') Нал.
+									+el("pay-card", "span")(class=val.pay[1] ? 'on' : '') Безнал.
+								+el("schedule")(class=val.pay[0] ? 'on' : '')
+									+el("schedule-title") Работа по выходным<br>и праздничным дням:
+									+el("schedule-weekends-on", "span") Да
+									+el("schedule-weekends-off", "span") Нет
+								+btn('Подробности', 'dashed').suppliers-more.js-suppliers-info-btn
+							+el("price") #{val.price} р.
+							+el("conditions")
+								h3 Минимальный заказ
+								p 800 р.
+								h3 Стоимость доставки
+								p 200 р.
+								h3 При заказе от 1000 руб.
+								p.red бесплатно
+						ul.accordion.suppliers-accordion.js-suppliers-info
+							li.accordion-item
+								h3.accordion-title.js-suppliers-menu-btn
+									span.accordion-title-image
+										img(src="#{images('sprites/cutlery-yellow.png')}")
+									|Меню
+								.accordion-content
+									+suppliers-menu()
+							li.accordion-item.js-container
+								h3.accordion-title.js-btn-toggle
+									span.accordion-title-image
+										img(src="#{images('sprites/check-on-green.png')}")
+									|О нас
+								.accordion-content.suppliers-about.clearfix.js-content
+									p
+										img(src="#{images('/example/about/doc-2.jpg')}")
+										img(src="#{images('/example/about/doc-1.jpg')}")
+										|Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика,  Краткое описание особенностей оставщика,  Краткое описание особенностей поставщика<br>
+										|Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика,  Краткое описание особенностей поставщика
+							li.accordion-item.js-container
+								h3.accordion-title.js-btn-toggle.js-chart
+									span.accordion-title-image
+										img(src="#{images('sprites/star-yellow.png')}")
+									|Оценка компании пользователями
+								.accordion-content.suppliers-rating.js-content
+									.suppliers-rating-chart
+										canvas.js-suppliers-rating
+									ul.suppliers-rating-period
+										each val, index in ['1 месяц', '3 месяца', '6 месяцев', '1 год']
+											li(class="#{index == 0 ? '__active js-rating-chart-update' : 'js-rating-chart-update'}")!= val
+							li.accordion-item.js-container
+								h3.accordion-title.js-btn-toggle
+									span.accordion-title-image
+										img(src="#{images('sprites/dialogue-green.png')}")
+									|Отзывы
+								.accordion-content.suppliers-comments.comments.js-content
+									.comments-item
+										img(src="#{images('example/commentator-1.jpg')}").comments-img
+										.comments-name Компания «Рога и Копыта»
+										|&nbsp;—&nbsp;
+										.comments-date 15.03.2014, 09:08
+										.comments-text Сегодня принесли не то, что мы заказывали, а борщ вообще был прокисшим
+									.comments-item
+										img(src="#{images('example/commentator-1.jpg')}").comments-img
+										.comments-name Компания «Рога и Копыта»
+										|&nbsp;—&nbsp;
+										.comments-date 15.03.2014, 09:08
+										.comments-text Сегодня принесли не то, что мы заказывали, а борщ вообще был прокисшим
+									.comments-item
+										img(src="#{images('example/commentator-2.jpg')}").comments-img
+										.comments-name Компания «Тестовая»
+										|&nbsp;—&nbsp;
+										.comments-date 15.11.2013, 09:08
+										.comments-text Спасибо, всё вкусно
+									.comments-item._left
+										img(src="#{images('example/commentator-1.jpg')}").comments-img
+										.comments-name Администратор
+										|&nbsp;—&nbsp;
+										.comments-date 15.11.2013, 09:08
+										.comments-text Спасибо, и дальше будем стараться
+							.suppliers-comments-close
+								+btn('Свернуть', 'dashed').__opened.js-suppliers-info-close
+
+
+

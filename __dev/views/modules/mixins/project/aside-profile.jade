@@ -1,7 +1,23 @@
-mixin aside-profile(active)
+mixin aside-profile(active, subMenuActive)
 	+namespace("aside")
 		+el("nav", "ul")
 			each val in asideNavLogged
-				+el("nav-item", "li")
-					+el("nav-link", "a")(href="#", class=active == val ? '__active' : '')!= val
+				+el("nav-item", "li")(class="#{val.titleMenu ? 'js-container' : ''}")
+					-
+						var elemClass = function() {
+							if(val.titleMenu && active == val.title) {
+								return '__menu __opened js-btn-toggle';
+							} else if(val.titleMenu) {
+								return '__menu js-btn-toggle';
+							} else if(active == val.title) {
+								return '__active';
+							} else {
+								return '';
+							}
+						}
+					+el("nav-link", "a")(href="#", class="#{elemClass()}")!= val.title
+					if val.titleMenu
+						+el("nav-menu")(class="#{active==val.title ? '__show js-content' : 'js-content'}")
+							each elem in val.titleMenu
+								a(href="#", class=subMenuActive == elem ? '__active' : '')!= elem
 		.calendar.js-calendar
