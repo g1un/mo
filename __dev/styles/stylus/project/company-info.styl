@@ -15,8 +15,10 @@
 	&-cell
 		display table-cell
 		vertical-align top
+		position relative
 		&.__right
 			padding-left 42px
+			width 100%
 	.form-table
 		float left
 		width 427px
@@ -42,4 +44,14 @@
 		.btn
 			float right
 			width 45%
-
+	&-submit
+		position absolute
+		left 42px
+		right 0
+		bottom 0
+	&-comment
+		margin 13px 0 0
+		font-size 14px
+		color #999
+	&-input[type="tel"]
+		margin-bottom 32px

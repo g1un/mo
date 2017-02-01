@@ -1,9 +1,8 @@
 
-$iconsCount = 3
+$iconsCount = 2
 $$icons = {
-	's-fb-footer': 0px 0px 0px 0px 30px 30px 80px 80px 'images/icons/__sprite.png'
-	's-twitter-footer': 50px 0px -50px 0px 30px 30px 80px 80px 'images/icons/__sprite.png'
-	's-vk-footer': 0px 50px 0px -50px 30px 30px 80px 80px 'images/icons/__sprite.png'
+	's-cross': 0px 0px 0px 0px 16px 17px 51px 17px 'images/icons/__sprite.png'
+	's-delete': 36px 0px -36px 0px 15px 17px 51px 17px 'images/icons/__sprite.png'
 }
 $spritesCount = 34
 $$sprite = {
@@ -1423,6 +1422,7 @@ main
 		background linear-gradient(to top, #80c28b, #80c28b 49%, #9ad5a4 54%, #9ad5a4)
 		box-shadow 1px 1px 1px 0 rgba(51,51,51,.75)
 		text-shadow 1px 1px 1px #fff
+		cursor pointer
 		&:hover
 			border 1px solid #469352
 			background #98dba3
@@ -1700,8 +1700,10 @@ main
 	&-cell
 		display table-cell
 		vertical-align top
+		position relative
 		&.__right
 			padding-left 42px
+			width 100%
 	.form-table
 		float left
 		width 427px
@@ -1727,8 +1729,17 @@ main
 		.btn
 			float right
 			width 45%
-
-
+	&-submit
+		position absolute
+		left 42px
+		right 0
+		bottom 0
+	&-comment
+		margin 13px 0 0
+		font-size 14px
+		color #999
+	&-input[type="tel"]
+		margin-bottom 32px
 .container
 	margin 0 auto
 	width 1090px
@@ -2896,6 +2907,7 @@ main
 		display table-cell
 		vertical-align middle
 		height 30px
+		padding 5px 0
 		font-open-sans-sb()
 		color #000
 		text-align center
@@ -2918,7 +2930,44 @@ main
 		&:last-child
 			border-radius 0 2px 2px 0
 			border-right none
+		&-tr
+			border-top 1px solid #fff
+		&-td
+			float left
+			text-align center
+			padding 5px 0
+			&.__col-2
+				width 50%
+				border-right 1px solid #fff
+				&:last-child
+					border none
 
+.team
+	padding 12px 28px 0 38px
+	&-table
+		.table
+			&-th
+				&:nth-child(1)
+					width 33px
+				&:nth-child(2)
+					width 138px
+				&:nth-child(3)
+					width 118px
+				&:nth-child(4)
+					width 118px
+				&:nth-child(5)
+					width 112px
+				&:nth-child(6)
+					width 124px
+				&:nth-child(7)
+					width 66px
+			&-td
+				font-size 13px
+				color #000
+				&:nth-child(2),
+				&:nth-child(3)
+					padding-left 5px
+					text-align left
 .slick-prev,
 .slick-next
 	position absolute

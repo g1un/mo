@@ -1,0 +1,66 @@
+[
+	{
+		"surname": "Иванов",
+		"name": "Иван",
+		"login": "user",
+		"password": "12345",
+		"access": "user",
+		"block": false
+	},
+	{
+		"surname": "Петров",
+		"name": "Петр",
+		"login": "superuser",
+		"password": "*****",
+		"access": "admin",
+		"block": false
+	},
+	{
+		"surname": "Сидоров",
+		"name": "Сидор",
+		"login": "proglot",
+		"password": "**********",
+		"access": "user",
+		"block": true
+	},
+	{
+		"surname": "Длинная фамилия",
+		"name": "Длинное имя",
+		"login": "glavbuh",
+		"password": "**********",
+		"access": "user",
+		"block": false
+	},
+	{
+		"surname": "Иванов",
+		"name": "Иван",
+		"login": "user",
+		"password": "12345",
+		"access": "user",
+		"block": false
+	},
+	{
+		"surname": "Петров",
+		"name": "Петр",
+		"login": "superuser",
+		"password": "*****",
+		"access": "admin",
+		"block": false
+	},
+	{
+		"surname": "Сидоров",
+		"name": "Сидор",
+		"login": "proglot",
+		"password": "**********",
+		"access": "user",
+		"block": true
+	},
+	{
+		"surname": "Длинная фамилия",
+		"name": "Длинное имя",
+		"login": "glavbuh",
+		"password": "**********",
+		"access": "user",
+		"block": false
+	}
+]

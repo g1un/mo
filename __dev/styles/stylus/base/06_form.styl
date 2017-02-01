@@ -277,3 +277,36 @@ main
 				border-left 3px solid #559c61
 				border-bottom 3px solid #559c61
 				transform rotate(-45deg)
+	.radio-notxt,
+	.checkbox-notxt
+		&-input,
+		input[type='checkbox']
+			display none
+			&:checked
+				& + .radio-notxt-label,
+				& + label
+				& + .checkbox-notxt-label,
+				& + label
+					&:after
+						display block
+		&-label,
+		label
+			display inline-block
+			vertical-align top
+			width 23px
+			height 22px
+			background #fff
+			border 1px solid #f7f4f0
+			cursor pointer
+			position relative
+			&:after
+				display none
+				content ''
+				position absolute
+				top 4px
+				left 4px
+				height 7px
+				width 13px
+				border-left 3px solid #559c61
+				border-bottom 3px solid #559c61
+				transform rotate(-45deg)

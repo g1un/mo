@@ -812,3 +812,55 @@ main .checkbox label:after {
        -o-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+main .radio-notxt-input,
+main .checkbox-notxt-input,
+main .radio-notxt input[type='checkbox'],
+main .checkbox-notxt input[type='checkbox'] {
+  display: none;
+}
+main .radio-notxt-input:checked + .radio-notxt-label:after,
+main .checkbox-notxt-input:checked + .radio-notxt-label:after,
+main .radio-notxt input[type='checkbox']:checked + .radio-notxt-label:after,
+main .checkbox-notxt input[type='checkbox']:checked + .radio-notxt-label:after,
+main .radio-notxt-input:checked + label:after,
+main .checkbox-notxt-input:checked + label:after,
+main .radio-notxt input[type='checkbox']:checked + label:after,
+main .checkbox-notxt input[type='checkbox']:checked + label:after,
+main .radio-notxt-input:checked + .checkbox-notxt-label:after,
+main .checkbox-notxt-input:checked + .checkbox-notxt-label:after,
+main .radio-notxt input[type='checkbox']:checked + .checkbox-notxt-label:after,
+main .checkbox-notxt input[type='checkbox']:checked + .checkbox-notxt-label:after {
+  display: block;
+}
+main .radio-notxt-label,
+main .checkbox-notxt-label,
+main .radio-notxt label,
+main .checkbox-notxt label {
+  display: inline-block;
+  vertical-align: top;
+  width: 23px;
+  height: 22px;
+  background: #fff;
+  border: 1px solid #f7f4f0;
+  cursor: pointer;
+  position: relative;
+}
+main .radio-notxt-label:after,
+main .checkbox-notxt-label:after,
+main .radio-notxt label:after,
+main .checkbox-notxt label:after {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 7px;
+  width: 13px;
+  border-left: 3px solid #559c61;
+  border-bottom: 3px solid #559c61;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

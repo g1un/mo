@@ -5,8 +5,8 @@ mixin company-info()
 			-var i = 'company'
 			+el("block")
 				+el("title") Информация о Вашей компании
-				+el("cell")
-					+el("form", "form")(action="#", method="post").clearfix
+				+el("form", "form")(action="#", method="post")
+					+el("cell")
 						.form-table
 							.form-row
 								.form-label
@@ -39,17 +39,18 @@ mixin company-info()
 										span (как добраться, с кем связаться и т.д.)
 								.form-control
 									textarea(name="#{i}-address", id="#{i}-for-curier").form-input.company-info-textarea
-				+el("cell").__right
-					+el("logo").clearfix
-						.form-label
-							label Логотип компании:
-								span (необязательно)
-						label(for="#{i}-logo").btn Загрузить
-						.image
-							img(src="#{images('example/no-logo.png')}")
-					input(type="file", name="#{i}-logo", id="#{i}-logo").form-file
-					input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn
-					+el("comment", "p") В течении нескольких минут мы свяжемся<br>с Вами для уточнения данных
+					+el("cell").__right
+						+el("logo").clearfix
+							.form-label
+								label Логотип компании:
+									span (необязательно)
+							label(for="#{i}-logo").btn Загрузить
+							.image
+								img(src="#{images('example/no-logo.png')}")
+						input(type="file", name="#{i}-logo", id="#{i}-logo").form-file
+						+el("submit")
+							input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn
+							+el("comment", "p") В течении нескольких минут мы свяжемся<br>с Вами для уточнения данных
 			-var i = 'requisite'
 			+el("block").clearfix
 				+el("title") Реквизиты компании
@@ -106,8 +107,9 @@ mixin company-info()
 				+el("cell").__right
 					.form-label
 						label(for="#{i}-index").label Телефон ответственного<br>бухгалтера:
-					input(type="tel", name="#{i}-index", id="#{i}-index").form-input
+					input(type="tel", name="#{i}-index", id="#{i}-index").form-input.company-info-input
 					.form-label
 						label(for="#{i}-index").label E-mail ответственного<br>бухгалтера:
-					input(type="tel", name="#{i}-index", id="#{i}-index").form-input
-					input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn
+					input(type="text", name="#{i}-index", id="#{i}-index").form-input
+					+el("submit")
+						input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn

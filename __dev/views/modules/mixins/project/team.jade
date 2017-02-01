@@ -1,0 +1,41 @@
+mixin team(teamTable)
+	+namespace("team")
+		+el().container-content-wrapper
+			+el("table").table
+				.table-tr
+					.table-th №
+					.table-th Фамилия
+					.table-th Имя
+					.table-th Логин
+					.table-th Временный пароль
+					.table-th
+						|Права
+						.table-td-tr
+							.table-td-td.__col-2 Юзер
+							.table-td-td.__col-2 Админ
+					.table-th Блоки-<br>ровать
+					.table-th
+						img(src="#{images('icons/delete.png')}")
+				each val, index in teamTable
+					.table-tr
+						.table-td!= index+1
+						.table-td!= val.surname
+						.table-td!= val.name
+						.table-td!= val.login
+						.table-td!= val.password
+						.table-td
+							.table-td-td.__col-2
+								.radio-notxt
+									input(type="radio", name="access-#{index}", id="user-#{index}", checked=(val.access == 'user' ? 'checked' : false)).radio-notxt-input
+									label(for="user-#{index}").radio-notxt-label
+							.table-td-td.__col-2
+								.radio-notxt
+									input(type="radio", name="access-#{index}", id="admin-#{index}", checked=(val.access == 'admin' ? 'checked' : false)).radio-notxt-input
+									label(for="admin-#{index}").radio-notxt-label
+						.table-td
+							.checkbox-notxt
+								input(type="checkbox", name="block-#{index}", id="block-#{index}", checked=(val.block ? 'checked' : false)).checkbox-input
+								label(for="block-#{index}").checkbox-notxt-label
+						.table-td
+							a(href="#").table-delete
+								img(src="#{images('icons/cross.png')}")

@@ -1,0 +1,12 @@
+extends layouts/_default
+
+block vars
+	-var currentPageTitle = ["Администрирование"];
+	-var logged = true;
+block content
+	.container-table
+		.container-aside.aside
+			+aside-profile("Администрирование", "Работа с коллективом")
+		.container-content
+			+content-header()
+			+team(teamTable)
