@@ -218,3 +218,20 @@ App.run(function(){
         }
     });
 });
+
+App.run(function(){
+    App.onClick('[data-btn]', function(){
+        var $this = $(this);
+        var btnContainer = $this.closest('[data-btn-container]');
+        var buttons = btnContainer.find('[data-btn]');
+        var content = $('[data-content="' + $this.attr('data-btn') + '"]');
+        var contents = content.closest('[data-content-container]').find('[data-content]');
+
+        if(!content.hasClass('__show')) {
+        	contents.removeClass('__show');
+            content.addClass('__show');
+            buttons.removeClass('__active');
+            $this.addClass('__active');
+        }
+    });
+});

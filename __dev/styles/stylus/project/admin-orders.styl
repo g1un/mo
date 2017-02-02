@@ -1,0 +1,135 @@
+.admin-orders
+	padding 18px 0 0 12px
+	&-wrapper
+		display table
+		width 100%
+		padding-bottom 21px
+	&-table
+		width 585px
+		display table-cell
+		vertical-align top
+		padding-right 15px
+		.table
+			&-tr
+				cursor pointer
+				.triangle
+					display none
+				&:hover,
+				&.__active
+					background #ffffe5
+				&.__active
+					position relative
+					.triangle
+						display block
+						position absolute
+						top 50%
+						margin-top -11px
+						right -12px
+						width 0
+						height 0
+						border-left 8px solid #559c61
+						border-top 11px solid transparent
+						border-bottom 11px solid transparent
+				&:nth-child(2)
+					.table-td
+						height 33px
+						padding-top 0
+			&-th
+				&:nth-child(1)
+					width 63px
+				&:nth-child(2)
+					width 47px
+				&:nth-child(3)
+					width 138px
+				&:nth-child(4)
+					width 131px
+				&:nth-child(5)
+					width 96px
+			&-td
+				&:nth-child(3)
+					padding-left 10px
+					text-align left
+				&:nth-child(4)
+					padding-left 10px
+					text-align left
+	&-balance
+		font-open-sans-bold()
+	&-aside
+		display table-cell
+		vertical-align top
+		background #ffffe5
+		border-radius 1px
+		padding 0 8px 64px
+		position relative
+		h4
+			margin-bottom 17px
+			padding 18px 7px
+			border-bottom 1px solid #559c61
+			font-open-sans-sb()
+			font-size 16px
+			color #559c61
+			position relative
+			img
+				position absolute
+				top 50%
+				margin-top -18px
+				right 7px
+				width 35px
+				height 35px
+	&-item
+		display none
+		&.__show
+			display block
+		ol
+			margin-left 20px
+			font-open-sans-reg()
+			font-size 13px
+			color #333
+			li
+				margin-bottom 15px
+				&:last-child
+					margin-bottom 0
+			b
+				font-open-sans-bold()
+	&-total
+		position absolute
+		bottom 0
+		left 8px
+		right 8px
+		height 48px
+		padding 0 8px
+		border-top 1px solid #559c61
+		font-open-sans-sb()
+		font-size 16px
+		line-height 48px
+		color #559c61
+		b
+			color #000
+			font-weight 400
+	&-buttons
+		margin-left -12px
+		padding 22px 0 0 12px
+		border-top 1px solid #efebe8
+		font-size 0
+	&-btn
+		&.btn
+			vertical-align middle
+			width 140px
+			margin-right 11px
+			&:last-of-type
+				margin-right 0
+	&-common
+		display inline-block
+		vertical-align middle
+		margin-left 42px
+		font-open-sans-reg()
+		font-size 13px
+		line-height 1.2em
+		color #cc0000
+		span
+			display inline-block
+			vertical-align top
+			border-bottom 1px dashed #cc0000
+		&:hover
+			span
+				border-bottom-color transparent

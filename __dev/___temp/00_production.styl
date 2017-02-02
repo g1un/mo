@@ -1210,6 +1210,133 @@ html
 					margin-left -20px
 					margin-right -20px
 					padding 0
+main
+	.btn
+		display inline-block
+		vertical-align top
+		min-width 146px
+		padding 0 10px
+		font-open-sans-reg()
+		font-size 18px
+		line-height 32px
+		color #333
+		text-align center
+		border 1px solid #7ebe89
+		border-radius 3px
+		background #80c28b
+		background linear-gradient(to top, #80c28b, #80c28b 49%, #9ad5a4 54%, #9ad5a4)
+		box-shadow 1px 1px 1px 0 rgba(51,51,51,.75)
+		text-shadow 1px 1px 1px #fff
+		cursor pointer
+		&:hover
+			border 1px solid #469352
+			background #98dba3
+			background linear-gradient(to top, #449150, #449150 49%, #70b07a 54%, #98dba3)
+			color #fff
+			text-shadow 1px 1px 1px #000
+			span
+				border-color transparent
+		span
+			display inline-block
+			vertical-align middle
+			line-height 1em
+			border-bottom 1px dashed #333
+		&.__grey
+			color #cc0000
+			border-color #e2e2e2
+			background linear-gradient(to top, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%)
+			&:hover
+				color #fff
+		&.__small
+			font-tahoma()
+			font-size 14px
+			line-height 32px
+	.btn-dashed
+		display inline-block
+		vertical-align top
+		padding-right 14px
+		font-size 13px
+		color #cc0000
+		text-transform uppercase
+		text-decoration none
+		border-bottom 1px dashed #cc0000
+		position relative
+		&:hover
+			border-bottom-color transparent
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right 0
+			margin-top -5px
+			sprite(arrow-up-red)
+			transform rotate(180deg)
+		&.__opened
+			&:after
+				transform none
+.table
+	display table
+	font-size 16px
+	&-tr
+		display table-row
+		&:nth-child(odd)
+			background #fbfaf6
+		&:nth-child(2)
+			.table-td
+				height 54px
+				padding-top 18px
+		&.admin
+			.on
+				&:before
+					display inline-block
+					vertical-align middle
+					content ''
+					sprite(check-green)
+			.table-td
+				color #cc0000
+	&-th
+		display table-cell
+		vertical-align middle
+		height 30px
+		padding 5px 0
+		font-open-sans-sb()
+		font-size 14px
+		line-height 1.2em
+		color #000
+		text-align center
+		background #f7f4f0
+		border-right 1px solid #fff
+		&:first-child
+			border-radius 2px 0 0 2px
+		&:last-child
+			border-radius 0 2px 2px 0
+			border-right none
+	&-td
+		display table-cell
+		vertical-align middle
+		height 33px
+		font-open-sans-reg()
+		font-size 13px
+		line-height 1.2em
+		color #333
+		text-align center
+		&:first-child
+			border-radius 2px 0 0 2px
+		&:last-child
+			border-radius 0 2px 2px 0
+			border-right none
+		&-tr
+			border-top 1px solid #fff
+		&-td
+			float left
+			text-align center
+			padding 5px 0
+			&.__col-2
+				width 50%
+				border-right 1px solid #fff
+				&:last-child
+					border none
+
 .accordion
 	&-item
 		margin-bottom 4px
@@ -1241,6 +1368,142 @@ html
 			img
 				max-height 100%
 
+
+.admin-orders
+	padding 18px 0 0 12px
+	&-wrapper
+		display table
+		width 100%
+		padding-bottom 21px
+	&-table
+		width 585px
+		display table-cell
+		vertical-align top
+		padding-right 15px
+		.table
+			&-tr
+				cursor pointer
+				.triangle
+					display none
+				&:hover,
+				&.__active
+					background #ffffe5
+				&.__active
+					position relative
+					.triangle
+						display block
+						position absolute
+						top 50%
+						margin-top -11px
+						right -12px
+						width 0
+						height 0
+						border-left 8px solid #559c61
+						border-top 11px solid transparent
+						border-bottom 11px solid transparent
+				&:nth-child(2)
+					.table-td
+						height 33px
+						padding-top 0
+			&-th
+				&:nth-child(1)
+					width 63px
+				&:nth-child(2)
+					width 47px
+				&:nth-child(3)
+					width 138px
+				&:nth-child(4)
+					width 131px
+				&:nth-child(5)
+					width 96px
+			&-td
+				&:nth-child(3)
+					padding-left 10px
+					text-align left
+				&:nth-child(4)
+					padding-left 10px
+					text-align left
+	&-balance
+		font-open-sans-bold()
+	&-aside
+		display table-cell
+		vertical-align top
+		background #ffffe5
+		border-radius 1px
+		padding 0 8px 64px
+		position relative
+		h4
+			margin-bottom 17px
+			padding 18px 7px
+			border-bottom 1px solid #559c61
+			font-open-sans-sb()
+			font-size 16px
+			color #559c61
+			position relative
+			img
+				position absolute
+				top 50%
+				margin-top -18px
+				right 7px
+				width 35px
+				height 35px
+	&-item
+		display none
+		&.__show
+			display block
+		ol
+			margin-left 20px
+			font-open-sans-reg()
+			font-size 13px
+			color #333
+			li
+				margin-bottom 15px
+				&:last-child
+					margin-bottom 0
+			b
+				font-open-sans-bold()
+	&-total
+		position absolute
+		bottom 0
+		left 8px
+		right 8px
+		height 48px
+		padding 0 8px
+		border-top 1px solid #559c61
+		font-open-sans-sb()
+		font-size 16px
+		line-height 48px
+		color #559c61
+		b
+			color #000
+			font-weight 400
+	&-buttons
+		margin-left -12px
+		padding 22px 0 0 12px
+		border-top 1px solid #efebe8
+		font-size 0
+	&-btn
+		&.btn
+			vertical-align middle
+			width 140px
+			margin-right 11px
+			&:last-of-type
+				margin-right 0
+	&-common
+		display inline-block
+		vertical-align middle
+		margin-left 42px
+		font-open-sans-reg()
+		font-size 13px
+		line-height 1.2em
+		color #cc0000
+		span
+			display inline-block
+			vertical-align top
+			border-bottom 1px dashed #cc0000
+		&:hover
+			span
+				border-bottom-color transparent
 
 .aside
 	padding 8px 9px
@@ -1405,66 +1668,6 @@ html
 			&:after
 				right 42px
 
-main
-	.btn
-		display inline-block
-		vertical-align top
-		min-width 146px
-		padding 0 10px
-		font-open-sans-reg()
-		font-size 18px
-		line-height 32px
-		color #333
-		text-align center
-		border 1px solid #7ebe89
-		border-radius 3px
-		background #80c28b
-		background linear-gradient(to top, #80c28b, #80c28b 49%, #9ad5a4 54%, #9ad5a4)
-		box-shadow 1px 1px 1px 0 rgba(51,51,51,.75)
-		text-shadow 1px 1px 1px #fff
-		cursor pointer
-		&:hover
-			border 1px solid #469352
-			background #98dba3
-			background linear-gradient(to top, #449150, #449150 49%, #70b07a 54%, #98dba3)
-			color #fff
-			text-shadow 1px 1px 1px #000
-			span
-				border-color transparent
-		span
-			display inline-block
-			vertical-align middle
-			line-height 1em
-			border-bottom 1px dashed #333
-		&.__grey
-			color #cc0000
-			border #e2e2e2
-			background linear-gradient(to top, #d7d7d7 49%, #e8e8e8 54%, #f7f8f7 91%)
-			&:hover
-				color #fff
-	.btn-dashed
-		display inline-block
-		vertical-align top
-		padding-right 14px
-		font-size 13px
-		color #cc0000
-		text-transform uppercase
-		text-decoration none
-		border-bottom 1px dashed #cc0000
-		position relative
-		&:hover
-			border-bottom-color transparent
-		&:after
-			content ''
-			position absolute
-			top 50%
-			right 0
-			margin-top -5px
-			sprite(arrow-up-red)
-			transform rotate(180deg)
-		&.__opened
-			&:after
-				transform none
 .calendar
 	max-width 206px
 	position relative
@@ -2883,68 +3086,10 @@ main
 				&.__active
 					border-color transparent
 					color #999
-.table
-	display table
-	font-size 16px
-	&-tr
-		display table-row
-		&:nth-child(odd)
-			background #fbfaf6
-		&:nth-child(2)
-			.table-td
-				height 54px
-				padding-top 18px
-		&.admin
-			.on
-				&:before
-					display inline-block
-					vertical-align middle
-					content ''
-					sprite(check-green)
-			.table-td
-				color #cc0000
-	&-th
-		display table-cell
-		vertical-align middle
-		height 30px
-		padding 5px 0
-		font-open-sans-sb()
-		color #000
-		text-align center
-		background #f7f4f0
-		border-right 1px solid #fff
-		&:first-child
-			border-radius 2px 0 0 2px
-		&:last-child
-			border-radius 0 2px 2px 0
-			border-right none
-	&-td
-		display table-cell
-		vertical-align middle
-		height 33px
-		font-open-sans-reg()
-		color #333
-		text-align center
-		&:first-child
-			border-radius 2px 0 0 2px
-		&:last-child
-			border-radius 0 2px 2px 0
-			border-right none
-		&-tr
-			border-top 1px solid #fff
-		&-td
-			float left
-			text-align center
-			padding 5px 0
-			&.__col-2
-				width 50%
-				border-right 1px solid #fff
-				&:last-child
-					border none
-
 .team
 	padding 12px 28px 0 38px
 	&-table
+		margin-bottom 10px
 		.table
 			&-th
 				&:nth-child(1)
@@ -2968,6 +3113,49 @@ main
 				&:nth-child(3)
 					padding-left 5px
 					text-align left
+	&-add
+		display inline-block
+		vertical-align top
+		margin-bottom 10px
+		margin-left 38px
+		font-open-sans-reg()
+		font-size 13px
+		color #559c61
+		text-decoration none
+		border-bottom 1px dashed #559c61
+		position relative
+		&:before
+			content ''
+			position absolute
+			top 50%
+			margin-top -1px
+			left -27px
+			width 13px
+			height 3px
+			background #559c61
+		&:after
+			content ''
+			position absolute
+			top 50%
+			margin-top -6px
+			left -22px
+			width 3px
+			height 13px
+			background #559c61;
+		&:hover
+			border-bottom-color transparent
+	&-buttons
+		margin 0 -28px 0 -38px
+		padding-top 22px
+		border-top 1px solid #efebe8
+		font-size 0
+		text-align center
+		.btn
+			min-width 168px
+			margin-right 13px
+			&:last-child
+				margin-right 0
+
 .slick-prev,
 .slick-next
 	position absolute

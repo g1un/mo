@@ -5,7 +5,8 @@
 		"login": "user",
 		"password": "12345",
 		"access": "user",
-		"block": false
+		"block": false,
+		"balance": "13243"
 	},
 	{
 		"surname": "Петров",
@@ -13,7 +14,8 @@
 		"login": "superuser",
 		"password": "*****",
 		"access": "admin",
-		"block": false
+		"block": false,
+		"balance": "243"
 	},
 	{
 		"surname": "Сидоров",
@@ -21,7 +23,8 @@
 		"login": "proglot",
 		"password": "**********",
 		"access": "user",
-		"block": true
+		"block": true,
+		"balance": "555"
 	},
 	{
 		"surname": "Длинная фамилия",
@@ -29,7 +32,8 @@
 		"login": "glavbuh",
 		"password": "**********",
 		"access": "user",
-		"block": false
+		"block": false,
+		"balance": "13243"
 	},
 	{
 		"surname": "Иванов",
@@ -37,7 +41,8 @@
 		"login": "user",
 		"password": "12345",
 		"access": "user",
-		"block": false
+		"block": false,
+		"balance": "234"
 	},
 	{
 		"surname": "Петров",
@@ -45,7 +50,8 @@
 		"login": "superuser",
 		"password": "*****",
 		"access": "admin",
-		"block": false
+		"block": false,
+		"balance": "555"
 	},
 	{
 		"surname": "Сидоров",
@@ -53,7 +59,8 @@
 		"login": "proglot",
 		"password": "**********",
 		"access": "user",
-		"block": true
+		"block": true,
+		"balance": "13243"
 	},
 	{
 		"surname": "Длинная фамилия",
@@ -61,6 +68,7 @@
 		"login": "glavbuh",
 		"password": "**********",
 		"access": "user",
-		"block": false
+		"block": false,
+		"balance": "234"
 	}
 ]

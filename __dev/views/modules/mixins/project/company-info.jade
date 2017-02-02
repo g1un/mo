@@ -15,7 +15,7 @@ mixin company-info()
 									input(type="text", name="#{i}-name", id="#{i}-name").form-input
 							.form-row
 								.form-label
-									label(for="#{i}-surname") Контактный телефон:
+									label(for="#{i}-tel") Контактный телефон:
 								.form-control
 									input(type="tel", name="#{i}-tel", id="#{i}-tel").form-input
 							.form-row
@@ -30,15 +30,15 @@ mixin company-info()
 									textarea(name="#{i}-address", id="#{i}-address").form-input.company-info-textarea
 							.form-row
 								.form-label
-									label(for="#{i}-email") Желаемое время доставки:
+									label(for="#{i}-time") Желаемое время доставки:
 								.form-control
 									input(type="text", name="#{i}-time", id="#{i}-time").form-input
 							.form-row
 								.form-label
-									label(for="#{i}-address") Подробные данные для курьера:
+									label(for="#{i}-for-curier") Подробные данные для курьера:
 										span (как добраться, с кем связаться и т.д.)
 								.form-control
-									textarea(name="#{i}-address", id="#{i}-for-curier").form-input.company-info-textarea
+									textarea(name="#{i}-for-curier", id="#{i}-for-curier").form-input.company-info-textarea
 					+el("cell").__right
 						+el("logo").clearfix
 							.form-label
@@ -106,10 +106,10 @@ mixin company-info()
 									input(type="tel", name="#{i}-index", id="#{i}-index").form-input
 				+el("cell").__right
 					.form-label
-						label(for="#{i}-index").label Телефон ответственного<br>бухгалтера:
-					input(type="tel", name="#{i}-index", id="#{i}-index").form-input.company-info-input
+						label(for="#{i}-accountant-tel").label Телефон ответственного<br>бухгалтера:
+					input(type="tel", name="#{i}-accountant-tel", id="#{i}-accountant-tel").form-input.company-info-input
 					.form-label
-						label(for="#{i}-index").label E-mail ответственного<br>бухгалтера:
-					input(type="text", name="#{i}-index", id="#{i}-index").form-input
+						label(for="#{i}-accountant-email").label E-mail ответственного<br>бухгалтера:
+					input(type="text", name="#{i}-accountant-email", id="#{i}-accountant-email").form-input
 					+el("submit")
 						input(type="submit", name="#{i}-submit", id="#{i}-submit", value="Сохранить").btn

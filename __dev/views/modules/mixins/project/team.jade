@@ -1,6 +1,6 @@
 mixin team(teamTable)
 	+namespace("team")
-		+el().container-content-wrapper
+		+el("", "form")(action="#", method="get").container-content-wrapper
 			+el("table").table
 				.table-tr
 					.table-th №
@@ -39,3 +39,7 @@ mixin team(teamTable)
 						.table-td
 							a(href="#").table-delete
 								img(src="#{images('icons/cross.png')}")
+			+el("add", "a")(href="#") Добавить
+			+el("buttons")
+				input(type="submit", name="team-submit", value="Сохнранить измнения").btn.__small.team-buttons-item
+				input(type="reset", name="team-reset", value="Не сохранять").btn.__grey.__small.team-buttons-item

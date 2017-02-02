@@ -1,0 +1,42 @@
+mixin admin-orders(teamTable)
+	+namespace("admin-orders")
+		+el("", "form")(action="#", mathod="get").container-content-wrapper
+			+el("wrapper")
+				+el("table")
+					.table(data-btn-container="admin-orders")
+						.table-tr
+							.table-th
+								.checkbox-notxt
+									input(type="checkbox", name="select-all", id="select-all").checkbox-input
+									label(for="select-all").checkbox-notxt-label
+							.table-th №
+							.table-th Фамилия
+							.table-th Имя
+							.table-th Логин
+							.table-th Баланс
+						each val, index in teamTable
+							div(class="table-tr#{index==0 ? ' __active' : ''}", data-btn="admin-orders-#{index}")
+								.table-td
+									.checkbox-notxt
+										input(type="checkbox", name="select-#{index}", id="select-#{index}", checked=(val.block ? 'checked' : false)).checkbox-input
+										label(for="select-#{index}").checkbox-notxt-label
+								.table-td!= index + 1
+								.table-td!= val.surname
+								.table-td!= val.name
+								.table-td!= val.login
+								.table-td.admin-orders-balance!= val.balance + " р."
+									.triangle
+				+el("aside")(data-content-container="admin-orders")
+					h4 Заказ:
+						img(src="#{images('sprites/pad-green.png')}")
+					each val, index in teamTable
+						+el("item")(class="#{index==0 ? '__show' : ''}", data-content="admin-orders-#{index}")
+							ol
+								each item in ["Солянка", "Грибной суп", "Борщ украинский", "Комплексный обед №2"]
+									li!= item + " "
+										b 3 шт.
+							+el("total") Итого: #[b #{index+1}000 р.]
+			+el("buttons")
+				input(type="submit", name="team-submit", value="Заказать").btn.__small.admin-orders-btn
+				input(type="reset", name="team-reset", value="Отменить заказ").btn.__grey.__small.admin-orders-btn
+				+el("common", "a")(href="#") #[span Сделать одинаковый заказ] <br>#[span для всех, кто не заказал]
