@@ -1,11 +1,6 @@
 mixin content-header()
 	+namespace("content-header")
 		header.content-header
-			+el("balance")
-				span Ваш баланс:
-				i
-					b 1500
-					| руб.
 			+el("countdown")
 				| Для заказа на завтра осталось
 				+el("time")
@@ -14,3 +9,8 @@ mixin content-header()
 					span :
 					span 2
 					span 4
+			+el("balance")
+				span Ваш баланс:
+				i
+					b 1500
+					| руб.

@@ -7,7 +7,7 @@ mixin admin-orders(teamTable)
 						.table-tr
 							.table-th
 								.checkbox-notxt
-									input(type="checkbox", name="select-all", id="select-all").checkbox-input
+									input(type="checkbox", name="select-all", id="select-all", data-select-all="admin-orders").checkbox-input
 									label(for="select-all").checkbox-notxt-label
 							.table-th №
 							.table-th Фамилия
@@ -18,7 +18,7 @@ mixin admin-orders(teamTable)
 							div(class="table-tr#{index==0 ? ' __active' : ''}", data-btn="admin-orders-#{index}")
 								.table-td
 									.checkbox-notxt
-										input(type="checkbox", name="select-#{index}", id="select-#{index}", checked=(val.block ? 'checked' : false)).checkbox-input
+										input(type="checkbox", name="select-#{index}", id="select-#{index}", data-select-all-item="admin-orders", checked=(val.block ? 'checked' : false)).checkbox-input
 										label(for="select-#{index}").checkbox-notxt-label
 								.table-td!= index + 1
 								.table-td!= val.surname
